@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>vue</title>
+    <desc>Created with Sketch.</desc>
+    <g id="vue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(14.000000, 0.000000)" fill-rule="nonzero">
+            <path d="M0,7.5757632 L0,192.424237 C0,196.363632 3.93870618,200 7.57443797,200 L165.425562,200 C169.364268,200 173,196.060605 173,192.424237 L173,43.9394422 L129.068225,0.303105528 L7.57422316,0 C3.63573179,0 0,3.9393953 0,7.5757632 Z" id="路径" fill="#4DBA87"></path>
+            <path d="M129,0 L129,34.5 C129,38.3999945 132.964553,42 136.624125,42 L172,42 L129,0 L129,0 Z" id="路径" fill="#78F0B8"></path>
+        </g>
+        <g transform="translate(55.000000, 71.000000)" fill-rule="nonzero" id="路径">
+            <polygon fill="#99F8CC" points="54.7412954 0.637137494 44.5109398 18.3562807 34.2809279 0.637137494 0.213015632 0.637137494 44.5109398 77.36302 88.8088639 0.637137494"></polygon>
+            <polygon fill="#2F9264" points="54.7412954 0.637137494 44.5109398 18.3562807 34.2809279 0.637137494 17.9321588 0.637137494 44.5109398 46.6727199 71.0899851 0.637137494"></polygon>
+        </g>
+    </g>
+</svg>

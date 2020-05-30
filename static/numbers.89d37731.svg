@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>numbers</title>
+    <desc>Created with Sketch.</desc>
+    <g id="numbers" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ppt" transform="translate(14.000000, 0.000000)" fill-rule="nonzero">
+            <path d="M0,7.5757632 L0,192.424237 C0,196.363632 3.93870618,200 7.57443797,200 L165.425562,200 C169.364268,200 173,196.060605 173,192.424237 L173,43.9394422 L129.068225,0.303105528 L7.57422316,0 C3.63573179,0 0,3.9393953 0,7.5757632 Z" id="路径" fill="#00BF40"></path>
+            <path d="M129,34.5 C129,38.3999945 132.964553,42 136.624125,42 L172,42 L129,0 L129,34.5 Z" id="路径" fill="#99FF96"></path>
+            <path d="M90.6666667,70 L104,70 L104,150 L90.6666667,150 L90.6666667,70 Z M112.666667,110 L126,110 L126,150 L112.666667,150 L112.666667,110 Z M69.3333333,96.6666667 L82.6666667,96.6666667 L82.6666667,150 L69.3333333,150 L69.3333333,96.6666667 Z M46,123.333333 L59.3333333,123.333333 L59.3333333,150 L46,150 L46,123.333333 Z" id="形状" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
