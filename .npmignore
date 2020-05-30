@@ -1,0 +1,15 @@
+.DS_Store
+/.idea
+/docs
+/examples
+/scripts
+/src
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+.umirc.ts
+babel.config.js
+tsconfig.cjs.json
+tsconfig.json
+yarn.lock

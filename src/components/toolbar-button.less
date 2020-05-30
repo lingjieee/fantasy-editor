@@ -1,0 +1,38 @@
+@import '../styles/theme';
+
+.fc-toolbar-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  padding: 5px;
+  margin: 4px;
+  border-radius: 2px;
+  &:not(:first-child) {
+    margin-left: 0;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: @font-color;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: @button-active-bg;
+  }
+  &.disable {
+    svg {
+      fill: @button-disable-color;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &.active {
+    background-color: @button-active-bg;
+  }
+}
+

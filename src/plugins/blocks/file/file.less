@@ -1,0 +1,29 @@
+@import '../../../styles/theme';
+
+.fc-file-wrap {
+  display: inline-block;
+  margin: 16px;
+}
+.fc-file {
+  background-color: #f2f2f2;
+  border: 1px solid @border-color;
+  border-radius: 4px;
+  width: 100px;
+  padding: 8px 12px;
+  &.selected {
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+}
+
+.fc-file-icon {
+  max-width: 100%;
+}
+
+.fc-file-filename {
+  padding-top: 4px;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

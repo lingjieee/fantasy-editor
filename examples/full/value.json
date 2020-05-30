@@ -1,0 +1,26 @@
+[
+  {
+    "type": "paragraph",
+    "children": [{ "text": "hello" }]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "type": "file",
+        "filename": "测试.pdf",
+        "url": "https://www.baidu.com/test.pdf",
+        "children": [{ "text": "" }]
+      },
+      {
+        "type": "file",
+        "filename": "测试.pdf",
+        "url": "https://www.baidu.com/test.txt",
+        "children": [{ "text": "" }]
+      },
+      {
+        "text": "xxxx"
+      }
+    ]
+  }
+]
