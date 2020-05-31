@@ -1,13 +1,13 @@
 ---
-title: Getting Started
+title: 快速上手
 group:
-  title: Guide
+  title: 指南
   order: 0
 nav:
-  title: Guide
+  title: 指南
 ---
 
-## Installation
+## 安装
 
 ### npm
 
@@ -15,18 +15,18 @@ nav:
 npm install fantasy-editor --save
 ```
 
-## Examples
+## 示例
 
 ```bash | pure
-# Clone the repository
+# 克隆仓库
 $ git clone https://github.com/lingjieee/fantasy-editor.git
 
-# Change directory
+# 切换目录
 $ cd fantasy-editor
 
-# Install dependencies
+# 安装依赖
 $ yarn install
 
-# Run examples
+# 运行示例
 $ yarn start
 ```

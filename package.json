@@ -31,11 +31,11 @@
     "start": "npm run docs:start",
     "build": "node ./scripts/build.js",
     "docs:start": "dumi dev",
-    "docs:build": "dumi build",
+    "docs:build": "dumi build &&  echo 'fantasy-editor.jieee.dev' > dist/CNAME",
     "lint": "eslint --cache --ext .ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "pretty-quick": "pretty-quick",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r git@github.com:lingjieee/fantasy-editor.git"
   },
   "sideEffects": [
     "dist/*",
