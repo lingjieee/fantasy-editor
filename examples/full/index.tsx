@@ -1,4 +1,5 @@
 import React, {FunctionComponent, useState} from 'react';
+// @ts-ignore
 import initValue from './value.json';
 import {Node} from 'slate';
 import FantasyEditor from "fantasy-editor";
@@ -45,6 +46,7 @@ const FullUsage: FunctionComponent<Props> = (props) => {
   };
 
   const onChange = (value: Node[]) => {
+    (window as any).value = value;
     setValue(value);
   };
 

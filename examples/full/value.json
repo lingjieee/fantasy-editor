@@ -1,25 +1,666 @@
 [
   {
-    "type": "paragraph",
-    "children": [{ "text": "hello" }]
+    "type": "h1",
+    "children": [
+      {
+        "text": "Heading1"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "children": [
+      {
+        "text": "Heading2"
+      }
+    ]
+  },
+  {
+    "type": "h3",
+    "children": [
+      {
+        "text": "Heading3"
+      }
+    ]
+  },
+  {
+    "type": "h4",
+    "children": [
+      {
+        "text": "Heading4"
+      }
+    ]
+  },
+  {
+    "type": "h5",
+    "children": [
+      {
+        "text": "Heading5"
+      }
+    ]
+  },
+  {
+    "type": "h6",
+    "children": [
+      {
+        "text": "Heading6"
+      }
+    ]
+  },
+  {
+    "type": "ul",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "bulleted list1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "bulleted list2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "bulleted list3"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "nested list1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "nested list2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ol",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "numbered list1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "numbered list2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "numbered list3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tasklist",
+    "children": [
+      {
+        "text": "task1"
+      }
+    ]
+  },
+  {
+    "type": "tasklist",
+    "children": [
+      {
+        "text": "task2"
+      }
+    ],
+    "checked": true
+  },
+  {
+    "type": "tasklist",
+    "children": [
+      {
+        "text": "task3"
+      }
+    ]
+  },
+  {
+    "type": "blockquote",
+    "children": [
+      {
+        "text": "Blockquote"
+      }
+    ]
+  },
+  {
+    "type": "code-block",
+    "lang": "javascript",
+    "children": [
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "const FullUsage: FunctionComponent<Props> = (props) => {"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "  const [value, setValue] = useState<Node[]>(initValue as any);"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "  const config: Config = {};"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "  const onChange = (value: Node[]) => {"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "    setValue(value);"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "  };"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "  return ("
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "    <div style={{padding: 50}}>"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "      <FantasyEditor value={value} config={config} onChange={onChange}/>"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "    </div>"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "  );"
+          }
+        ]
+      },
+      {
+        "type": "code-inline",
+        "children": [
+          {
+            "text": "};"
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "paragraph",
     "children": [
       {
-        "type": "file",
-        "filename": "测试.pdf",
-        "url": "https://www.baidu.com/test.pdf",
-        "children": [{ "text": "" }]
+        "text": "Bold",
+        "bold": true
       },
       {
-        "type": "file",
-        "filename": "测试.pdf",
-        "url": "https://www.baidu.com/test.txt",
-        "children": [{ "text": "" }]
+        "text": ", "
       },
       {
-        "text": "xxxx"
+        "text": "italic",
+        "italic": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "underline",
+        "underline": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "strikethrough",
+        "strike-through": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "mixed",
+        "bold": true,
+        "italic": true,
+        "underline": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "code",
+        "code": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "sub",
+        "subscript": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "sup",
+        "superscript": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "color",
+        "font-color": "#d0021b"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "bg-clor",
+        "bg-color": "#f8e71c"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "",
+        "bg-color": "#f8e71c"
+      }
+    ]
+  },
+  {
+    "type": "table-wrap",
+    "children": [
+      {
+        "type": "table-pre",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "row": 4,
+        "col": 5,
+        "children": [
+          {
+            "type": "table-row",
+            "children": [
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "Header1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "Header2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "Header3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "Header4"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "table-row",
+            "children": [
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "cell"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "table-row",
+            "children": [
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "cell"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "table-row",
+            "children": [
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "cell"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "table-cell",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table-suf",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
       }
     ]
   }

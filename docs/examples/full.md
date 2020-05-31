@@ -1,5 +1,5 @@
 ---
-title: FullUsage
+title: FullDemo
 group:
   title: Core
   order: 1

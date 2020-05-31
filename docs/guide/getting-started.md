@@ -15,12 +15,6 @@ nav:
 npm install fantasy-editor --save
 ```
 
-### umd
-
-```html | pure
-<script src="https://unpkg.com/fantasy-editor@${version}/dist/index.js"></script>
-```
-
 ## 示例
 
 ```bash | pure
