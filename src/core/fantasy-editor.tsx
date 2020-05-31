@@ -39,6 +39,9 @@ import { LineHeightPlugin } from '@/plugins/marks/line-height';
 import { FullPageProvider } from './context/full-page';
 import classNames from 'classnames';
 import { withShortcuts } from '@/plugins/with-shortcuts';
+import {withMention, MentionPlugin, useMention} from "@/plugins/blocks/mention";
+import {MENTIONS} from "@/core/mentions";
+import MentionSelect from "@/plugins/blocks/mention/components/mention-select";
 
 interface OwnProps {
   locale?: LocaleDefinition;
@@ -59,6 +62,7 @@ const withPlugins = [
   withTrailingNode(),
   withVoid([BLOCK_HR]),
   withShortcuts(),
+  withMention(),
 ];
 
 const FantasyEditor: React.FC<Props> = props => {
@@ -135,8 +139,25 @@ const FantasyEditor: React.FC<Props> = props => {
     if (pluginConfig.lineHeight) {
       list.push(LineHeightPlugin());
     }
+    if (pluginConfig.mention){
+      list.push(MentionPlugin({
+        onClick: (value) => console.log(`Hello ${value}!`)
+      }));
+    }
     return list;
   }, [pluginConfig]);
+
+  const {
+    onChangeMention,
+    onKeyDownMention,
+    search,
+    index,
+    target,
+    values,
+  } = useMention(MENTIONS, {
+    maxSuggestions: 10,
+    trigger: '@',
+  });
 
   const editor = useMemo(() => pipe(createEditor(), ...withPlugins), []);
   const [value, setValue] = useState<Node[]>(defaultValue || []);
@@ -160,11 +181,19 @@ const FantasyEditor: React.FC<Props> = props => {
     <div className={classNames('fc-editor', { full })}>
       <LocaleProvider locale={locale}>
         <FullPageProvider full={full} setFull={setFull}>
-          <Slate editor={editor} value={value} onChange={handleChange}>
+          <Slate editor={editor} value={value} onChange={value => {
+            handleChange(value);
+            onChangeMention(editor);
+          }}>
             <Toolbar config={config} />
             <div className="fc-content" style={{ height: editorConfig.height || 500 }}>
-              <PluginEditor plugins={plugins} />
+              <PluginEditor
+                plugins={plugins}
+                onKeyDown={[onKeyDownMention]}
+                onKeyDownDeps={[index, search, target]}
+              />
             </div>
+            <MentionSelect at={target} valueIndex={index} options={values}/>
           </Slate>
         </FullPageProvider>
       </LocaleProvider>

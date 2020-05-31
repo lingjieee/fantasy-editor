@@ -43,6 +43,7 @@ export interface Config {
     table?: boolean;
     full?: boolean;
     video?: boolean;
+    mention?: boolean;
   };
   editor?: {
     height?: number;
