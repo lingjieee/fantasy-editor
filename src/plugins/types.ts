@@ -41,3 +41,4 @@ export const BLOCK_TABLE = 'table';
 export const BLOCK_TABLE_ROW = 'table-row';
 export const BLOCK_TABLE_CELL = 'table-cell';
 export const BLOCK_MENTION = 'mention';
+export const BLOCK_TASKLIST = 'tasklist';

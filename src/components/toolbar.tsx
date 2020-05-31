@@ -28,6 +28,7 @@ import ButtonFile from './buttons/button-file';
 import ButtonTable from './buttons/talbe/button-table';
 import ButtonLineHeight from './buttons/button-line-height';
 import ButtonFull from './buttons/button-full';
+import ButtonTasklist from "./buttons/button-tasklist";
 
 interface OwnProps {
   config?: Config;
@@ -58,6 +59,7 @@ const Toolbar: FunctionComponent<Props> = props => {
       {plugin.codeBlock && <ButtonCodeBlock />}
       {plugin.list && <ButtonNumberedList />}
       {plugin.list && <ButtonBulletedList />}
+      {plugin.tasklist && <ButtonTasklist/>}
       {plugin.ident && <ButtonIdentInc />}
       {plugin.ident && <ButtonIdentDec />}
       {plugin.lineHeight && <ButtonLineHeight />}

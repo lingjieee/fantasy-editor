@@ -31,6 +31,7 @@ const FullUsage: FunctionComponent<Props> = (props) => {
       code: true,
       codeBlock: true,
       list: true,
+      tasklist: true,
       ident: true,
       link: true,
       image: true,

@@ -1,0 +1,28 @@
+
+.fc-task-list{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 3px 0;
+}
+
+.fc-task-list-check{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.fc-task-text{
+  flex: 1;
+  opacity: 1;
+  text-decoration: none;
+  &:focus{
+    outline: none;
+  }
+  &.finish{
+    opacity: 0.666;
+    text-decoration: line-through;
+  }
+}

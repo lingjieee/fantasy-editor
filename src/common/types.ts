@@ -44,6 +44,7 @@ export interface Config {
     full?: boolean;
     video?: boolean;
     mention?: boolean;
+    tasklist?:boolean;
   };
   editor?: {
     height?: number;

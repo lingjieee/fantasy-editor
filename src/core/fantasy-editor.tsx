@@ -39,9 +39,9 @@ import { LineHeightPlugin } from '@/plugins/marks/line-height';
 import { FullPageProvider } from './context/full-page';
 import classNames from 'classnames';
 import { withShortcuts } from '@/plugins/with-shortcuts';
-import { withMention, MentionPlugin, useMention } from '@/plugins/blocks/mention';
+import { withMention, MentionPlugin, useMention, MentionSelect } from '@/plugins/blocks/mention';
 import { MENTIONS } from '@/core/mentions';
-import MentionSelect from '@/plugins/blocks/mention/components/mention-select';
+import {TaskListPlugin} from "@/plugins/blocks/tasklist";
 
 interface OwnProps {
   locale?: LocaleDefinition;
@@ -145,6 +145,9 @@ const FantasyEditor: React.FC<Props> = props => {
           onClick: value => console.log(`Hello ${value}!`),
         }),
       );
+    }
+    if(pluginConfig.tasklist){
+      list.push(TaskListPlugin())
     }
     return list;
   }, [pluginConfig]);

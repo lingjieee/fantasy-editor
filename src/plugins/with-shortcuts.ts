@@ -1,5 +1,6 @@
 import { Editor, Range, Transforms } from 'slate';
 import {
+  BLOCK_CODE,
   BLOCK_H1,
   BLOCK_H2,
   BLOCK_H3,
@@ -8,7 +9,7 @@ import {
   BLOCK_H6,
   BLOCK_LI,
   BLOCK_OL,
-  BLOCK_QUOTE,
+  BLOCK_QUOTE, BLOCK_TASKLIST,
   BLOCK_UL,
 } from './types';
 import { toggleList } from '../utils/toggleList';
@@ -25,6 +26,8 @@ const SHORTCUTS: Record<string, string> = {
   '####': BLOCK_H4,
   '#####': BLOCK_H5,
   '######': BLOCK_H6,
+  '[]': BLOCK_TASKLIST,
+  '```': BLOCK_CODE,
 };
 
 export const withShortcuts = () => <T extends Editor>(editor: T) => {
