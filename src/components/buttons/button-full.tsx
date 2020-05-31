@@ -9,7 +9,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonFull: FunctionComponent<Props> = props => {
-  let { full, setFull } = useFullPage();
+  const { full, setFull } = useFullPage();
 
   const handleSwitch = () => {
     setFull(!full);

@@ -10,14 +10,15 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonBold: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   return (
     <ToolbarButton
       onMouseDown={() => {
         toggleMark(editor, MARK_BOLD);
       }}
-      active={isMarkActive(editor, MARK_BOLD)}>
+      active={isMarkActive(editor, MARK_BOLD)}
+    >
       <IconBold />
     </ToolbarButton>
   );

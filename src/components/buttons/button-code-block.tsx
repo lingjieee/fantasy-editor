@@ -11,7 +11,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonCodeBlock: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   const toggleBlock = () => {
     const active = isBlockActive(editor, BLOCK_CODE);

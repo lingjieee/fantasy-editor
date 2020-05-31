@@ -18,7 +18,7 @@ type Props = OwnProps;
 const ButtonFontSize: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
 
-  let editor = useSlate();
+  const editor = useSlate();
   const marks = Editor.marks(editor);
   const value: string = marks?.[MARK_FONT_SIZE] || '14px';
   const [mark, setMark] = useState<Range | null>(null);

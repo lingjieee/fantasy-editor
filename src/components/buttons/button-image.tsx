@@ -11,22 +11,22 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonImage: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   const handleMouseDown = () => {
-    let { selection } = editor;
+    const { selection } = editor;
     const isCollapsed = selection && Range.isCollapsed(selection);
     if (!isCollapsed) {
       Transforms.collapse(editor, { edge: 'end' });
     }
-    let eleInput = document.createElement('input');
+    const eleInput = document.createElement('input');
     eleInput.type = 'file';
     eleInput.style.display = 'none';
     eleInput.accept = 'image/*';
     eleInput.onchange = (e: any) => {
-      let file = e.target.files[0];
+      const file = e.target.files[0];
       if (file) {
-        let result = mockUpload(file, () => {});
+        const result = mockUpload(file, () => {});
         ReactEditor.focus(editor);
         if (selection) {
           Transforms.select(editor, selection);

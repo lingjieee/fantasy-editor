@@ -29,7 +29,7 @@ type Props = OwnProps;
 
 const ButtonAlign: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
-  let editor = useSlate();
+  const editor = useSlate();
 
   const match = findBlockActive(editor, alignList);
   const value: string = match?.[0]?.type || BLOCK_ALIGN_LEFT;

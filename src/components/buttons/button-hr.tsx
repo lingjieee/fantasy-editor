@@ -10,7 +10,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonHr: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   const insertHr = () => {
     let { selection } = editor;
@@ -19,7 +19,7 @@ const ButtonHr: FunctionComponent<Props> = props => {
       Transforms.collapse(editor, { edge: 'end' });
       selection = editor.selection;
     } else {
-      let [match] = Editor.nodes(editor, {
+      const [match] = Editor.nodes(editor, {
         match: n => n.type === BLOCK_PARAGRAPH,
       }) as any;
       if (match) {

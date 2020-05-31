@@ -52,13 +52,13 @@ export const codeBlockDecorate = (entry: NodeEntry, editor: Editor) => {
   const [node, path] = entry;
   if (node.type === BLOCK_CODE_INLINE) {
     const text = Node.string(node);
-    let [parent] = Editor.parent(editor, path);
+    const [parent] = Editor.parent(editor, path);
     const langName: any = parent.lang || 'markup';
     const lang = languages[langName];
     if (lang) {
       const tokens = tokenize(text, lang);
       let offset = 0;
-      for (let element of tokens) {
+      for (const element of tokens) {
         if (typeof element === 'string') {
           offset = offset + element.length;
         } else {

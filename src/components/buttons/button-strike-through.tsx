@@ -10,14 +10,15 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonStrikeThrough: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   return (
     <ToolbarButton
       onMouseDown={() => {
         toggleMark(editor, MARK_STRIKE_THROUGH);
       }}
-      active={isMarkActive(editor, MARK_STRIKE_THROUGH)}>
+      active={isMarkActive(editor, MARK_STRIKE_THROUGH)}
+    >
       <IconStrikeThrough />
     </ToolbarButton>
   );

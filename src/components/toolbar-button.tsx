@@ -27,7 +27,8 @@ const ToolbarButton: FunctionComponent<Props> = forwardRef((props, ref) => {
       style={style}
       className={classNames('fc-toolbar-btn', disabled ? 'disable' : active ? 'active' : null, className)}
       ref={ref as any}
-      onMouseDown={handleMouseDown}>
+      onMouseDown={handleMouseDown}
+    >
       {children}
     </button>
   );

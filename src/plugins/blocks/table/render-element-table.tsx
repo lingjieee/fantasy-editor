@@ -18,7 +18,7 @@ export const renderElementTable: RenderElement = ({ attributes, children, elemen
 const Table: React.FC<RenderElementProps> = ({ attributes, children, element }) => {
   const col: number = element.col as number;
   const widths: number[] = (element.widths as any) || [];
-  let total = Array(col)
+  const total = Array(col)
     .fill('')
     .reduce((prev, curr, idx) => prev + (widths[idx] || 100));
   return (
@@ -38,10 +38,10 @@ const Table: React.FC<RenderElementProps> = ({ attributes, children, element }) 
 };
 
 const TableCell: React.FC<RenderElementProps> = ({ attributes, children, element }) => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   const handleClick = () => {
-    let path = ReactEditor.findPath(editor, element);
+    const path = ReactEditor.findPath(editor, element);
     Transforms.select(editor, path);
   };
 

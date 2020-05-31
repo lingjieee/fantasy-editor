@@ -12,16 +12,12 @@ export const renderElementImage: RenderElement = ({ attributes, children, elemen
 };
 
 const ImageElement = ({ attributes, children, element }: RenderElementProps) => {
-  let selected = useSelected();
-  let focused = useFocused();
+  const selected = useSelected();
+  const focused = useFocused();
   return (
     <div {...attributes}>
       <div contentEditable="false" suppressContentEditableWarning>
-        <img
-          src={element.url as string}
-          className={classNames('fc-image', { selected: selected && focused })}
-          alt=""
-        />
+        <img src={element.url as string} className={classNames('fc-image', { selected: selected && focused })} alt="" />
       </div>
       <div>{children}</div>
     </div>

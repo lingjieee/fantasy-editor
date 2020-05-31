@@ -24,8 +24,8 @@ type Props = OwnProps;
 const ButtonTable: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
   const [mark, setMark] = useState<Range | null>(null);
-  let editor = useSlate();
-  let active = isBlockActive(editor, BLOCK_TABLE);
+  const editor = useSlate();
+  const active = isBlockActive(editor, BLOCK_TABLE);
   const show = () => {
     if (!active) {
       const { selection } = editor;
@@ -50,7 +50,8 @@ const ButtonTable: FunctionComponent<Props> = props => {
         content={<SizeSelection onSelect={onSelect} />}
         onVisibleChange={setVisible}
         trigger={['click']}
-        placement="bottomLeft">
+        placement="bottomLeft"
+      >
         <ToolbarButton onMouseDown={show} active={active}>
           <IconTable />
         </ToolbarButton>
@@ -74,7 +75,7 @@ interface SelectionProps {
 }
 
 const SizeSelection: React.FC<SelectionProps> = ({ onSelect }) => {
-  let [renderSize, setRenderSize] = useState({
+  const [renderSize, setRenderSize] = useState({
     row: 4,
     col: 4,
   });
@@ -125,7 +126,8 @@ const SizeSelection: React.FC<SelectionProps> = ({ onSelect }) => {
                     className={classNames('fe-btn-tb-cell', { active: r < row && c < col })}
                     onClick={() => handleSelect(r, c)}
                     onMouseEnter={() => onHover(r, c)}
-                    key={c}>
+                    key={c}
+                  >
                     &nbsp;
                   </div>
                 ))}

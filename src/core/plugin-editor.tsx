@@ -42,7 +42,7 @@ const PluginEditor: React.FC<PluginEditorProps> = ({
   ...rest
 }) => {
   const editor = useSlate();
-  let {
+  const {
     editor: { placeholder },
   } = useLocale();
   return (

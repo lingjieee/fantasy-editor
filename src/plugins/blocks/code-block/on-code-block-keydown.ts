@@ -9,8 +9,8 @@ export const onKeyDownCodeBlock = (e: KeyboardEvent, editor: Editor) => {
     });
     if (match) {
       const [, path] = match;
-      let text = Editor.string(editor, path);
-      let [parent, parentPath] = Editor.parent(editor, path);
+      const text = Editor.string(editor, path);
+      const [parent, parentPath] = Editor.parent(editor, path);
       // 在最后一行，没有文本且输入回车
       if (!text && path[path.length - 1] === parent.children.length - 1) {
         e.preventDefault();

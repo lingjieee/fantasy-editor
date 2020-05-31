@@ -12,15 +12,16 @@ export const renderElementHr: RenderElement = ({ attributes, children, element }
 };
 
 const HrElement = ({ attributes, children }: RenderElementProps) => {
-  let focused = useFocused();
-  let selected = useSelected();
+  const focused = useFocused();
+  const selected = useSelected();
 
   return (
     <div {...attributes}>
       <div
         contentEditable="false"
         className={classNames('fc-hr', { selected: selected && focused })}
-        suppressContentEditableWarning>
+        suppressContentEditableWarning
+      >
         <hr />
       </div>
       <div>{children}</div>

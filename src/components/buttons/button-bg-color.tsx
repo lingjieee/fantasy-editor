@@ -19,8 +19,8 @@ type Props = OwnProps;
 
 const ButtonBgColor: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
-  let editor = useSlate();
-  let {
+  const editor = useSlate();
+  const {
     editor: { removeColor },
   } = useLocale();
   const [color, setColor] = useState<string>('#1890ff');
@@ -52,7 +52,7 @@ const ButtonBgColor: FunctionComponent<Props> = props => {
   };
 
   const overlay = (
-    <div className={classNames("fc-btn-bg-content", 'ant-dropdown-menu')} onMouseDown={e => e.stopPropagation()}>
+    <div className={classNames('fc-btn-bg-content', 'ant-dropdown-menu')} onMouseDown={e => e.stopPropagation()}>
       <div className="fc-btn-bg-header" onClick={cleanColor}>
         <IconClear />
         <span>{removeColor}</span>
@@ -67,7 +67,8 @@ const ButtonBgColor: FunctionComponent<Props> = props => {
       overlay={overlay}
       visible={visible}
       overlayClassName="fc-btn-bg-overlay"
-      onVisibleChange={setVisible}>
+      onVisibleChange={setVisible}
+    >
       <DropdownButton width={45} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
         <IconBgColor />
       </DropdownButton>

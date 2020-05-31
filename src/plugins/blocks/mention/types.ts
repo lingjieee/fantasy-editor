@@ -1,18 +1,18 @@
-import {RenderElementProps} from "slate-react";
+import { RenderElementProps } from 'slate-react';
 
-export interface MentionRenderElementProps extends RenderElementProps{
-  prefix?:string,
-  onClick?:(value:any)=>void;
+export interface MentionRenderElementProps extends RenderElementProps {
+  prefix?: string;
+  onClick?: (value: any) => void;
 }
 
 export interface MentionPluginOptions {
-  prefix?:string,
-  onClick?:(value:any)=>void;
+  prefix?: string;
+  onClick?: (value: any) => void;
 }
 
 export interface MentionNodeData {
-  value:string;
-  filter?:string;
+  value: string;
+  filter?: string;
   [key: string]: any;
 }
 

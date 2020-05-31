@@ -10,14 +10,14 @@ const ListHotkey = {
 const moveDown = (editor: Editor) => {
   const { selection } = editor;
   if (selection) {
-    let match = Editor.above(editor, {
+    const match = Editor.above(editor, {
       match: (n: any) => n.type === BLOCK_LI,
     });
     if (match) {
       const [, liPath] = match;
-      let prevPath = Path.previous(liPath);
-      let [prevNode] = Editor.node(editor, prevPath);
-      let [lastNode, lastNodePath] = Editor.node(editor, prevPath.concat([(prevNode as any).children.length - 1]));
+      const prevPath = Path.previous(liPath);
+      const [prevNode] = Editor.node(editor, prevPath);
+      const [lastNode, lastNodePath] = Editor.node(editor, prevPath.concat([(prevNode as any).children.length - 1]));
       if ([BLOCK_OL, BLOCK_UL].includes(lastNode.type as string)) {
         const newPath = lastNodePath.concat([(lastNode as any).children.length]);
         Transforms.moveNodes(editor, {
@@ -30,7 +30,7 @@ const moveDown = (editor: Editor) => {
           at: liPath,
           to: newPath,
         });
-        let outerMatch = Editor.above(editor, {
+        const outerMatch = Editor.above(editor, {
           match: (n: any) => [BLOCK_UL, BLOCK_OL].includes(n.type),
         });
         if (outerMatch) {
@@ -53,7 +53,7 @@ const moveDown = (editor: Editor) => {
 const moveUp = (editor: Editor) => {
   const { selection } = editor;
   if (selection) {
-    let match = Editor.above(editor, {
+    const match = Editor.above(editor, {
       match: (n: any) => n.type === BLOCK_LI,
     });
     if (match) {
@@ -61,14 +61,14 @@ const moveUp = (editor: Editor) => {
       let nextPath = Path.next(liPath.slice(0, liPath.length - 1));
       let nest = false;
       if (nextPath.length > 1) {
-        let [parent] = Editor.node(editor, nextPath.slice(0, nextPath.length - 1));
+        const [parent] = Editor.node(editor, nextPath.slice(0, nextPath.length - 1));
         if (parent.type === BLOCK_LI) {
           nest = true;
         }
       }
       if (nest) {
         nextPath = Path.next(nextPath.slice(0, nextPath.length - 1));
-        let [pNode, pPath] = Editor.node(editor, liPath.slice(0, liPath.length - 1));
+        const [pNode, pPath] = Editor.node(editor, liPath.slice(0, liPath.length - 1));
         if ((pNode as any).children.length === 1) {
           Transforms.unwrapNodes(editor, {
             at: pPath,
@@ -103,13 +103,13 @@ const addNew = (editor: Editor) => {
     const {
       anchor: { path },
     } = selection;
-    let match = Editor.above(editor, {
+    const match = Editor.above(editor, {
       match: (n: any) => n.type === BLOCK_LI,
     });
     if (match) {
       const [, liPath] = match;
       const itemPath = path.slice(0, liPath.length + 1);
-      let nextPath = Path.next(liPath);
+      const nextPath = Path.next(liPath);
       Transforms.moveNodes(editor, {
         at: itemPath,
         to: nextPath,
@@ -129,7 +129,7 @@ export const onKeyDownList = (e: KeyboardEvent, editor: Editor) => {
     });
     if (match) {
       const [, path] = match;
-      let text = Editor.string(editor, path);
+      const text = Editor.string(editor, path);
       if (e.key === ListHotkey.TAB) {
         e.preventDefault();
         if (e.shiftKey) {

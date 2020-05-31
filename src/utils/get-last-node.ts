@@ -4,7 +4,7 @@ export const getLastNode = (editor: Editor, level: number): NodeEntry => {
   const [, lastPath] = Editor.last(editor, []);
   let i = lastPath.length;
   while (i > 0) {
-    let path = lastPath.slice(0, i);
+    const path = lastPath.slice(0, i);
     const node = Editor.node(editor, path);
     if (!!node[0].type) {
       return node;

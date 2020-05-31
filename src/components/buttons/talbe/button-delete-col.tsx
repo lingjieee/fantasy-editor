@@ -9,13 +9,14 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonDeleteCol: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   return (
     <ToolbarButton
       onMouseDown={() => {
         deleteColumn(editor);
-      }}>
+      }}
+    >
       <IconDelCol />
     </ToolbarButton>
   );

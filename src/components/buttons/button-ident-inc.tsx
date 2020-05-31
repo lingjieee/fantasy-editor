@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import ToolbarButton from '../toolbar-button';
 import { isBlockActive } from '@/common/transforms';
 import { useSlate } from 'slate-react';
-import {BLOCK_INDENT, BLOCK_PARAGRAPH} from '@/plugins/types';
+import { BLOCK_INDENT, BLOCK_PARAGRAPH } from '@/plugins/types';
 import { ReactComponent as IconIdentInc } from '../../assets/svg/ident.svg';
 import { Editor, Transforms } from 'slate';
 
@@ -11,7 +11,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonIdentInc: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   const toggleIdent = () => {
     const [match] = Editor.nodes(editor, {

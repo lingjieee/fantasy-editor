@@ -11,7 +11,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonIdentDec: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   const toggleIdent = () => {
     const [match] = Editor.nodes(editor, {

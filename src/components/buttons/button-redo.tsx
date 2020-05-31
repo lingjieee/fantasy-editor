@@ -9,7 +9,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonRedo: FunctionComponent<Props> = props => {
-  let editor: HistoryEditor = useSlate() as any;
+  const editor: HistoryEditor = useSlate() as any;
 
   return (
     <ToolbarButton onMouseDown={editor.redo} disabled={editor.history.redos.length === 0}>

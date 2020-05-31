@@ -8,7 +8,7 @@ export const isMarkActive = (editor: Editor, type: string) => {
 
 export const isBlockActive = (editor: Editor, format: string) => {
   const [match] = Editor.nodes(editor, {
-    match: (n: any) => n.type===format,
+    match: (n: any) => n.type === format,
   }) as any;
   return !!match;
 };
@@ -42,7 +42,7 @@ export const toggleMark = (editor: Editor, key: string, clear: string | string[]
 };
 
 export const toggleBlock = (editor: Editor, format: string) => {
-  let active = isBlockActive(editor, format);
+  const active = isBlockActive(editor, format);
   Transforms.setNodes(
     editor,
     {

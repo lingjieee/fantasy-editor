@@ -1,4 +1,4 @@
-import {MentionNodeData} from "@/plugins/blocks/mention/types";
+import { MentionNodeData } from '@/plugins/blocks/mention/types';
 
 export const MENTIONS: MentionNodeData[] = [
   { value: 'Aayla Secura' },

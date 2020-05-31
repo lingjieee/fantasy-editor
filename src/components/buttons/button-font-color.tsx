@@ -9,7 +9,7 @@ import './button-font-color.less';
 import { useLocale } from '@/common/locale-provider';
 import DropdownButton from '../dropdown-button';
 import Dropdown from 'antd/lib/dropdown';
-import 'antd/lib/dropdown/style'
+import 'antd/lib/dropdown/style';
 import classNames from 'classnames';
 import { Range, Transforms } from 'slate';
 
@@ -19,8 +19,8 @@ type Props = OwnProps;
 
 const ButtonFontColor: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
-  let editor = useSlate();
-  let {
+  const editor = useSlate();
+  const {
     editor: { removeColor },
   } = useLocale();
   const [color, setColor] = useState<string>('#1890ff');
@@ -67,7 +67,8 @@ const ButtonFontColor: FunctionComponent<Props> = props => {
       overlay={overlay}
       visible={visible}
       overlayClassName="fc-btn-font-overlay"
-      onVisibleChange={setVisible}>
+      onVisibleChange={setVisible}
+    >
       <DropdownButton width={45} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
         <IconFontColor />
       </DropdownButton>

@@ -9,13 +9,14 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonInsertColRight: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   return (
     <ToolbarButton
       onMouseDown={() => {
         insertColumn(editor, 'left');
-      }}>
+      }}
+    >
       <IconInsertColRight />
     </ToolbarButton>
   );

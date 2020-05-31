@@ -14,7 +14,7 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonLink: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
   const [value, setValue] = useState({
     editable: true,
     text: '',
@@ -81,7 +81,8 @@ const ButtonLink: FunctionComponent<Props> = props => {
       content={<Input {...value} onCancel={() => setVisible(false)} onSave={onInsert} />}
       onVisibleChange={setVisible}
       trigger={['click']}
-      placement="bottom">
+      placement="bottom"
+    >
       <ToolbarButton onMouseDown={toggleLink} active={isBlockActive(editor, BLOCK_LINK)}>
         <IconLink />
       </ToolbarButton>

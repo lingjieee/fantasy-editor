@@ -17,8 +17,8 @@ export const withTrailingNode = () => <T extends Editor>(editor: T) => {
           { at: Path.next(lastPath) },
         );
       }
-      let path = lastPath.slice(0, 1);
-      let [node] = Editor.node(editor, path);
+      const path = lastPath.slice(0, 1);
+      const [node] = Editor.node(editor, path);
       if (node.type === BLOCK_TABLE) {
         Transforms.insertNodes(
           editor,

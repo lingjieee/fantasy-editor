@@ -19,7 +19,7 @@ type Props = OwnProps;
 const ButtonLineHeight: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
 
-  let editor = useSlate();
+  const editor = useSlate();
   const [mark, setMark] = useState<Range | null>(null);
 
   const onClick = (e: any) => {

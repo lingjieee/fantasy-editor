@@ -11,7 +11,7 @@ export const onKeyDownBlockquote = (e: KeyboardEvent, editor: Editor) => {
       const { selection } = editor;
       const [node, path] = match;
       if (selection) {
-        let childPath = Editor.path(editor, selection);
+        const childPath = Editor.path(editor, selection);
         if (childPath.length > path.length) {
           const idx = childPath[path.length];
           if (idx === node.children.length - 1) {

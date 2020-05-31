@@ -3,7 +3,7 @@ import { BLOCK_LI, BLOCK_PARAGRAPH } from '../plugins/types';
 import { Editor, Transforms } from 'slate';
 
 export const toggleList = (editor: Editor, type: string) => {
-  let active = isBlockActive(editor, type);
+  const active = isBlockActive(editor, type);
 
   Transforms.unwrapNodes(editor, {
     match: (n: any) => n.type === BLOCK_LI,

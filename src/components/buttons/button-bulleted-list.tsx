@@ -11,14 +11,15 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonBulletedList: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
 
   return (
     <ToolbarButton
       onMouseDown={() => {
         toggleList(editor, BLOCK_UL);
       }}
-      active={isBlockActive(editor, BLOCK_UL)}>
+      active={isBlockActive(editor, BLOCK_UL)}
+    >
       <IconBulletedList />
     </ToolbarButton>
   );

@@ -28,12 +28,12 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonHeading: FunctionComponent<Props> = props => {
-  let {
+  const {
     editor: { h1, h2, h3, h4, h5, h6, paragraph },
   } = useLocale();
 
   const [visible, setVisible] = useState(false);
-  let editor = useSlate();
+  const editor = useSlate();
 
   const match = findBlockActive(editor, headingList);
   const value: string = match?.[0]?.type || BLOCK_PARAGRAPH;

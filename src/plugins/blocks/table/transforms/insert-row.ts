@@ -8,7 +8,7 @@ export const insertRow = (editor: Editor, position: 'top' | 'bottom') => {
   });
   if (currentRow) {
     const [, rowPath] = currentRow;
-    let [tableNode, tablePath] = Editor.parent(editor, rowPath);
+    const [tableNode, tablePath] = Editor.parent(editor, rowPath);
     const col = tableNode.col as number;
     Transforms.insertNodes(editor, getEmptyTableRow(col), {
       at: position === 'top' ? rowPath : Path.next(rowPath),

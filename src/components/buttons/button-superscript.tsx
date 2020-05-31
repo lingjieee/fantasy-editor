@@ -10,13 +10,14 @@ interface OwnProps {}
 type Props = OwnProps;
 
 const ButtonSuperscript: FunctionComponent<Props> = props => {
-  let editor = useSlate();
+  const editor = useSlate();
   return (
     <ToolbarButton
       onMouseDown={() => {
         toggleMark(editor, MARK_SUPERSCRIPT);
       }}
-      active={isMarkActive(editor, MARK_SUPERSCRIPT)}>
+      active={isMarkActive(editor, MARK_SUPERSCRIPT)}
+    >
       <IconSup />
     </ToolbarButton>
   );

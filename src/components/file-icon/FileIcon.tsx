@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { FILE_ICON_MAP, FILE_TYPE_MAP } from './constants';
 
 const getIconType = (extname: string) => {
-  let fileType: string = 'common';
+  let fileType = 'common';
   Object.keys(FILE_TYPE_MAP).map(type => {
     FILE_TYPE_MAP[type].map(name => {
       if (name === extname) {

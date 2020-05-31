@@ -39,9 +39,9 @@ import { LineHeightPlugin } from '@/plugins/marks/line-height';
 import { FullPageProvider } from './context/full-page';
 import classNames from 'classnames';
 import { withShortcuts } from '@/plugins/with-shortcuts';
-import {withMention, MentionPlugin, useMention} from "@/plugins/blocks/mention";
-import {MENTIONS} from "@/core/mentions";
-import MentionSelect from "@/plugins/blocks/mention/components/mention-select";
+import { withMention, MentionPlugin, useMention } from '@/plugins/blocks/mention';
+import { MENTIONS } from '@/core/mentions';
+import MentionSelect from '@/plugins/blocks/mention/components/mention-select';
 
 interface OwnProps {
   locale?: LocaleDefinition;
@@ -139,22 +139,17 @@ const FantasyEditor: React.FC<Props> = props => {
     if (pluginConfig.lineHeight) {
       list.push(LineHeightPlugin());
     }
-    if (pluginConfig.mention){
-      list.push(MentionPlugin({
-        onClick: (value) => console.log(`Hello ${value}!`)
-      }));
+    if (pluginConfig.mention) {
+      list.push(
+        MentionPlugin({
+          onClick: value => console.log(`Hello ${value}!`),
+        }),
+      );
     }
     return list;
   }, [pluginConfig]);
 
-  const {
-    onChangeMention,
-    onKeyDownMention,
-    search,
-    index,
-    target,
-    values,
-  } = useMention(MENTIONS, {
+  const { onChangeMention, onKeyDownMention, search, index, target, values } = useMention(MENTIONS, {
     maxSuggestions: 10,
     trigger: '@',
   });
@@ -169,7 +164,7 @@ const FantasyEditor: React.FC<Props> = props => {
     }
   }, [propValue]);
 
-  let handleChange = useCallback(
+  const handleChange = useCallback(
     (value: Node[]) => {
       setValue(value);
       onChange?.(value);
@@ -181,19 +176,19 @@ const FantasyEditor: React.FC<Props> = props => {
     <div className={classNames('fc-editor', { full })}>
       <LocaleProvider locale={locale}>
         <FullPageProvider full={full} setFull={setFull}>
-          <Slate editor={editor} value={value} onChange={value => {
-            handleChange(value);
-            onChangeMention(editor);
-          }}>
+          <Slate
+            editor={editor}
+            value={value}
+            onChange={value => {
+              handleChange(value);
+              onChangeMention(editor);
+            }}
+          >
             <Toolbar config={config} />
             <div className="fc-content" style={{ height: editorConfig.height || 500 }}>
-              <PluginEditor
-                plugins={plugins}
-                onKeyDown={[onKeyDownMention]}
-                onKeyDownDeps={[index, search, target]}
-              />
+              <PluginEditor plugins={plugins} onKeyDown={[onKeyDownMention]} onKeyDownDeps={[index, search, target]} />
             </div>
-            <MentionSelect at={target} valueIndex={index} options={values}/>
+            <MentionSelect at={target} valueIndex={index} options={values} />
           </Slate>
         </FullPageProvider>
       </LocaleProvider>
