@@ -27,7 +27,7 @@ import { ListPlugin } from '@/plugins/blocks/list';
 import { IdentPlugin } from '@/plugins/blocks/ident';
 import { LinkPlugin } from '@/plugins/blocks/link';
 import { withInline } from '@/plugins/with-inline';
-import { BLOCK_FILE, BLOCK_HR, BLOCK_LINK } from '@/plugins/types';
+import {BLOCK_FILE, BLOCK_HR, BLOCK_LINK} from '@/plugins/types';
 import { ImagePlugin, withImage } from '../plugins/blocks/image';
 import { withTrailingNode } from '@/plugins/with-trailing-node';
 import { withVoid } from '@/plugins/with-void';
@@ -42,6 +42,7 @@ import { withShortcuts } from '@/plugins/with-shortcuts';
 import { withMention, MentionPlugin, useMention, MentionSelect } from '@/plugins/blocks/mention';
 import { MENTIONS } from '@/core/mentions';
 import {TaskListPlugin} from "@/plugins/blocks/tasklist";
+import {SoftBreakPlugin} from "@/plugins/other/soft-break";
 
 interface OwnProps {
   locale?: LocaleDefinition;
@@ -73,6 +74,7 @@ const FantasyEditor: React.FC<Props> = props => {
 
   const plugins: SlatePlugin[] = useMemo(() => {
     const list: SlatePlugin[] = [];
+    list.push(SoftBreakPlugin());
     if (pluginConfig.heading) {
       list.push(HeadingPlugin());
     }

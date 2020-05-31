@@ -6,7 +6,7 @@ import 'antd/lib/popover/style';
 import { Range, Transforms } from 'slate';
 import { ReactEditor, useSlate } from 'slate-react';
 import { isBlockActive } from '@/common/transforms';
-import { BLOCK_TABLE } from '@/plugins/types';
+import {BLOCK_TABLE_WRAP} from '@/plugins/types';
 import classNames from 'classnames';
 import { insertTable } from '@/plugins/blocks/table';
 import ButtonInsertRowTop from './button-insert-row-top';
@@ -16,6 +16,8 @@ import ButtonInsertColRight from './button-insert-row-right';
 import ButtonDeleteRow from './button-delete-row';
 import ButtonDeleteCol from './button-delete-col';
 import './button-table.less';
+import ButtonMergeCell from "@/components/buttons/talbe/button-merge-cell";
+import ButtonSplitCell from "@/components/buttons/talbe/button-split-cell";
 
 interface OwnProps {}
 
@@ -25,7 +27,7 @@ const ButtonTable: FunctionComponent<Props> = props => {
   const [visible, setVisible] = useState(false);
   const [mark, setMark] = useState<Range | null>(null);
   const editor = useSlate();
-  const active = isBlockActive(editor, BLOCK_TABLE);
+  const active = isBlockActive(editor, BLOCK_TABLE_WRAP);
   const show = () => {
     if (!active) {
       const { selection } = editor;
@@ -64,6 +66,8 @@ const ButtonTable: FunctionComponent<Props> = props => {
           <ButtonInsertColRight />
           <ButtonDeleteRow />
           <ButtonDeleteCol />
+          {/*<ButtonMergeCell/>*/}
+          {/*<ButtonSplitCell/>*/}
         </>
       )}
     </>

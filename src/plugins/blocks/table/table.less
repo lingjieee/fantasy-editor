@@ -5,10 +5,34 @@
   border: 1px solid @border-color;
   td {
     border: 1px solid #dedede;
+    position: relative;
+    padding: 7px 10px;
+    &.selected{
+      &:before{
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
+        border: .5px solid @active-color;
+        content: '';
+      }
+    }
   }
 }
 
 .fc-table-wrap {
   width: 100%;
   overflow: auto;
+  margin: 0 -2px;
+  position: relative;
+}
+
+.fc-table-container{
+  display: inline-block;
+}
+
+.fc-table-tool{
+  width: 2px;
+  display: inline-block;
 }

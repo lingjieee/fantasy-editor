@@ -12,6 +12,7 @@ const MentionElement: React.FC<MentionRenderElementProps> = ({ attributes, child
     <span
       {...attributes}
       contentEditable={'false'}
+      suppressContentEditableWarning
       className={classNames('fc-mention', { selected: selected && focused })}
       onClick={() => onClick?.({ value: element.value })}
     >
