@@ -58,7 +58,6 @@ const processLess = function(context, payload) {
 
 async function build() {
     // Clean
-    rimraf.sync('dist');
     rimraf.sync('lib');
     rimraf.sync('es');
 
