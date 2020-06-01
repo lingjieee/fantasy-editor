@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useState } from 'react';
-import { ReactComponent as IconFontColor } from '@/assets/svg/font-color.svg';
-import { ReactComponent as IconClear } from '@/assets/svg/clear.svg';
+import { ReactComponent as IconFontColor } from '../../../assets/svg/font-color.svg';
+import { ReactComponent as IconClear } from '../../../assets/svg/clear.svg';
 import { ColorResult, SketchPicker } from 'react-color';
-import { isBlockActive, isMarkActive } from '@/common/transforms';
+import { isBlockActive, isMarkActive } from '../../../common/transforms';
 import { BLOCK_CODE, MARK_COLOR } from '@/core/types';
 import { ReactEditor, useSlate } from 'slate-react';
 import './button-font-color.less';

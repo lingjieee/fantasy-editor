@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { useSlate } from 'slate-react';
 import { HistoryEditor } from 'slate-history';
-import { ReactComponent as IconRedo } from '@/assets/svg/redo.svg';
+import { ReactComponent as IconRedo } from '../../assets/svg/redo.svg';
 import {ToolbarButton} from "@/components";
 
 interface OwnProps {}

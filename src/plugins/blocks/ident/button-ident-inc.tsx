@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { isBlockActive } from '@/common/transforms';
 import { useSlate } from 'slate-react';
 import { BLOCK_INDENT } from '@/core/types';
-import { ReactComponent as IconIdentInc } from '@/assets/svg/ident.svg';
+import { ReactComponent as IconIdentInc } from '../../../assets/svg/ident.svg';
 import { Editor, Transforms } from 'slate';
 import {ToolbarButton} from "@/components";
 

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconHr } from '@/assets/svg/hr.svg';
+import { ReactComponent as IconHr } from '../../../assets/svg/hr.svg';
 import { useSlate } from 'slate-react';
 import { Editor, Range, Transforms } from 'slate';
 import { BLOCK_HR, BLOCK_PARAGRAPH } from '@/core/types';

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconNumberedList } from '@/assets/svg/numbered-list.svg';
+import { ReactComponent as IconNumberedList } from '../../../assets/svg/numbered-list.svg';
 import { isBlockActive } from '@/common/transforms';
 import { useSlate } from 'slate-react';
 import { BLOCK_OL } from '@/core/types';

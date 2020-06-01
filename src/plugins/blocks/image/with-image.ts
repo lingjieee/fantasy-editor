@@ -1,5 +1,5 @@
 import { ReactEditor } from 'slate-react';
-import { withVoid } from '@/plugins';
+import { withVoid } from '../../with-void';
 import { BLOCK_IMAGE } from '@/core/types';
 import { isImageUrl } from '@/utils/is-url';
 import { FileProps, insertImage, mockUpload } from '@/utils/tools/file-tool';

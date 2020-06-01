@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
-import { ReactComponent as IconLink } from '@/assets/svg/link.svg';
+import { ReactComponent as IconLink } from '../../../assets/svg/link.svg';
 import { isBlockActive } from '@/common/transforms';
 import { ReactEditor, useSlate } from 'slate-react';
 import { BLOCK_LINK } from '@/core/types';

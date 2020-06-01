@@ -1,4 +1,4 @@
-import { isBlockActive } from '../common/transforms';
+import { isBlockActive } from '@/common';
 import { BLOCK_LI, BLOCK_PARAGRAPH } from '../core/types';
 import { Editor, Transforms } from 'slate';
 

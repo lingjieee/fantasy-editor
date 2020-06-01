@@ -1,4 +1,4 @@
-import { MentionNodeData } from '@/plugins/blocks/mention/types';
+import { MentionNodeData } from 'fantasy-editor';
 
 export const MENTIONS: MentionNodeData[] = [
   { value: 'Aayla Secura' },

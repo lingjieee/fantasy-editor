@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconQuote } from '@/assets/svg/quote.svg';
+import { ReactComponent as IconQuote } from '../../../assets/svg/quote.svg';
 import { useSlate } from 'slate-react';
 import { isBlockActive } from '@/common/transforms';
 import { BLOCK_QUOTE } from '@/core/types';

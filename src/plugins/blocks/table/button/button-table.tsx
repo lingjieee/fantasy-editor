@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { ReactComponent as IconTable } from '@/assets/svg/table.svg';
+import { ReactComponent as IconTable } from '../../../../assets/svg/table.svg';
 import Popover from 'antd/lib/popover';
 import 'antd/lib/popover/style';
 import { Range, Transforms } from 'slate';
@@ -7,7 +7,7 @@ import { ReactEditor, useSlate } from 'slate-react';
 import { isBlockActive } from '@/common/transforms';
 import {BLOCK_TABLE_WRAP} from '@/core/types';
 import classNames from 'classnames';
-import { insertTable } from '@/plugins/blocks/table';
+import { insertTable } from '../transforms';
 import {ButtonInsertRowTop} from './button-insert-row-top';
 import {ButtonInsertRowBottom} from './button-insert-row-bottom';
 import {ButtonInsertColLeft} from './button-insert-row-left';

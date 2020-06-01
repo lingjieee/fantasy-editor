@@ -3,7 +3,7 @@ import { ReactEditor, useSlate } from 'slate-react';
 import { Range, Transforms } from 'slate';
 import { insertFile, insertImage, mockUpload } from '@/utils/tools/file-tool';
 import isPromise from 'is-promise';
-import { ReactComponent as IconFile } from '@/assets/svg/file.svg';
+import { ReactComponent as IconFile } from '../../../assets/svg/file.svg';
 import {ToolbarButton} from "@/components";
 
 interface OwnProps {}

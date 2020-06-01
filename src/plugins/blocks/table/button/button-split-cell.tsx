@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from 'react';
-import {ReactComponent as IconSplit} from '@/assets/svg/split-cell-horizontal.svg';
+import {ReactComponent as IconSplit} from '../../../../assets/svg/split-cell-horizontal.svg';
 import {useSlate} from "slate-react";
 import {findBlockActive} from "@/common/transforms";
 import {BLOCK_TABLE_CELL} from "@/core/types";

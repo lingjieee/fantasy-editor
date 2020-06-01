@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { ReactComponent as IconLineHeight } from '@/assets/svg/line-height.svg';
+import { ReactComponent as IconLineHeight } from '../../../assets/svg/line-height.svg';
 import { ReactEditor, useSlate } from 'slate-react';
 import { Range, Transforms } from 'slate';
 import { BLOCK_CODE, MARK_LINE_HEIGHT } from '@/core/types';

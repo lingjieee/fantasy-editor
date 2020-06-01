@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconCode } from '@/assets/svg/code.svg';
+import { ReactComponent as IconCode } from '../../../assets/svg/code.svg';
 import { useSlate } from 'slate-react';
 import { isMarkActive, toggleMark } from '@/common/transforms';
 import { MARK_CODE } from '@/core/types';

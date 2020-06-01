@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconUnderline } from '@/assets/svg/underline.svg';
+import { ReactComponent as IconUnderline } from '../../../assets/svg/underline.svg';
 import { useSlate } from 'slate-react';
 import { isMarkActive, toggleMark } from '@/common/transforms';
 import { MARK_UNDERLINE } from '@/core/types';

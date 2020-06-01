@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconIdentDec } from '@/assets/svg/outdent.svg';
+import { ReactComponent as IconIdentDec } from '../../../assets/svg/outdent.svg';
 import { Editor, Transforms } from 'slate';
 import { BLOCK_INDENT } from '@/core/types';
 import { isBlockActive } from '@/common/transforms';

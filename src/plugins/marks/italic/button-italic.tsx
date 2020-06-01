@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconItalic } from '@/assets/svg/italic.svg';
+import { ReactComponent as IconItalic } from '../../../assets/svg/italic.svg';
 import { useSlate } from 'slate-react';
 import { isMarkActive, toggleMark } from '@/common/transforms';
 import { MARK_ITALIC } from '@/core/types';

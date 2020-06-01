@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconInsertColRight } from '@/assets/svg/insert-col-right.svg';
+import { ReactComponent as IconInsertColRight } from '../../../../assets/svg/insert-col-right.svg';
 import { useSlate } from 'slate-react';
-import { insertColumn } from '@/plugins/blocks/table';
+import { insertColumn } from '../transforms';
 import {ToolbarButton} from "@/components";
 
 interface OwnProps {}

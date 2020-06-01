@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { HistoryEditor } from 'slate-history';
-import { ReactComponent as IconUndo } from '@/assets/svg/undo.svg';
+import { ReactComponent as IconUndo } from '../../assets/svg/undo.svg';
 import { useSlate } from 'slate-react';
 import {ToolbarButton} from "@/components";
 

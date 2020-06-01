@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconCodeBlock } from '@/assets/svg/code-snippet.svg';
+import { ReactComponent as IconCodeBlock } from '../../../assets/svg/code-snippet.svg';
 import { useSlate } from 'slate-react';
 import { isBlockActive } from '@/common/transforms';
 import { BLOCK_CODE, BLOCK_CODE_INLINE, BLOCK_PARAGRAPH } from '@/core/types';

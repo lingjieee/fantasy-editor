@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconBulletedList } from '@/assets/svg/bulleted-list.svg';
+import { ReactComponent as IconBulletedList } from '../../../assets/svg/bulleted-list.svg';
 import { isBlockActive } from '@/common/transforms';
 import { useSlate } from 'slate-react';
 import { BLOCK_UL } from '@/core/types';

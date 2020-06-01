@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useState } from 'react';
-import { ReactComponent as IconAlignLeft } from '@/assets/svg/align-left.svg';
-import { ReactComponent as IconAlignCenter } from '@/assets/svg/align-center.svg';
-import { ReactComponent as IconAlignRight } from '@/assets/svg/align-right.svg';
-import { ReactComponent as IconAlignJustify } from '@/assets/svg/align-justify.svg';
+import { ReactComponent as IconAlignLeft } from '../../../assets/svg/align-left.svg';
+import { ReactComponent as IconAlignCenter } from '../../../assets/svg/align-center.svg';
+import { ReactComponent as IconAlignRight } from '../../../assets/svg/align-right.svg';
+import { ReactComponent as IconAlignJustify } from '../../../assets/svg/align-justify.svg';
 import { findBlockActive, isBlockActive } from '@/common/transforms';
 import {
   BLOCK_ALIGN_CENTER,

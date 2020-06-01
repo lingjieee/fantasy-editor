@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { useFullPage } from '@/core/context/full-page';
-import { ReactComponent as IconFull } from '@/assets/svg/full.svg';
-import { ReactComponent as IconExist } from '@/assets/svg/exist-full.svg';
+import { ReactComponent as IconFull } from '../../assets/svg/full.svg';
+import { ReactComponent as IconExist } from '../../assets/svg/exist-full.svg';
 import {ToolbarButton} from "@/components";
 
 interface OwnProps {}

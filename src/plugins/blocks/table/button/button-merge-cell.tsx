@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import {ReactComponent as IconMerge} from '@/assets/svg/table-merge.svg';
+import {ReactComponent as IconMerge} from '../../../../assets/svg/table-merge.svg';
 import {findBlockActive} from "@/common/transforms";
 import {useSlate} from "slate-react";
 import {BLOCK_TABLE} from "@/core/types";

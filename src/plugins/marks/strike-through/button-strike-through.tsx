@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconStrikeThrough } from '@/assets/svg/strikethrough.svg';
+import { ReactComponent as IconStrikeThrough } from '../../../assets/svg/strikethrough.svg';
 import { useSlate } from 'slate-react';
 import { isMarkActive, toggleMark } from '@/common/transforms';
 import { MARK_STRIKE_THROUGH } from '@/core/types';

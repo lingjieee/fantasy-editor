@@ -1,5 +1,5 @@
 import { Editor } from 'slate';
-import { OnDOMBeforeInput, SlatePlugin } from '../common/types';
+import { OnDOMBeforeInput, SlatePlugin } from '@/core/types';
 
 export const onDOMBeforeInputPlugins = (
   editor: Editor,

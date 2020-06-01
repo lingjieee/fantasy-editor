@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { ReactComponent as IconImage } from '@/assets/svg/image.svg';
+import { ReactComponent as IconImage } from '../../../assets/svg/image.svg';
 import { ReactEditor, useSlate } from 'slate-react';
 import { Range, Transforms } from 'slate';
 import { insertImage, mockUpload } from '@/utils/tools/file-tool';

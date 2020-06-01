@@ -1,5 +1,5 @@
 import { Editor, NodeEntry, Range } from 'slate';
-import { Decorate, SlatePlugin } from '../common/types';
+import { Decorate, SlatePlugin } from '@/core/types';
 
 export const decoratePlugins = (editor: Editor, plugins: SlatePlugin[], decorateList: Decorate[]) => (
   entry: NodeEntry,

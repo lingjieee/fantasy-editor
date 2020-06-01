@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import {ReactComponent as IconTask} from '@/assets/svg/tasklist.svg';
+import {ReactComponent as IconTask} from '../../../assets/svg/tasklist.svg';
 import {useSlate} from "slate-react";
 import {isBlockActive, toggleBlock} from "@/common/transforms";
 import {BLOCK_TASK_LIST} from "@/core/types";

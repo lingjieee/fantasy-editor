@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
-import { ReactComponent as IconBgColor } from '@/assets/svg/bgcolor.svg';
-import { ReactComponent as IconClear } from '@/assets/svg/clear.svg';
+import { ReactComponent as IconBgColor } from '../../../assets/svg/bgcolor.svg';
+import { ReactComponent as IconClear } from '../../../assets/svg/clear.svg';
 import { ColorResult, SketchPicker } from 'react-color';
 import { isBlockActive, isMarkActive } from '@/common/transforms';
 import { BLOCK_CODE, MARK_BG_COLOR } from '@/core/types';
