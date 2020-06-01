@@ -1,6 +1,6 @@
 import { Editor, Path, Transforms } from 'slate';
 import isHotkey from 'is-hotkey';
-import { BLOCK_QUOTE } from '../../types';
+import { BLOCK_QUOTE } from '@/core/types';
 
 export const onKeyDownBlockquote = (e: KeyboardEvent, editor: Editor) => {
   if (isHotkey('Enter', e)) {

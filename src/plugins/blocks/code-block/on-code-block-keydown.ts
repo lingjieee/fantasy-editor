@@ -1,6 +1,6 @@
 import { Editor, Path, Transforms } from 'slate';
 import isHotkey from 'is-hotkey';
-import { BLOCK_CODE_INLINE, BLOCK_PARAGRAPH } from '../../types';
+import { BLOCK_CODE_INLINE, BLOCK_PARAGRAPH } from '@/core/types';
 
 export const onKeyDownCodeBlock = (e: KeyboardEvent, editor: Editor) => {
   if (isHotkey('Enter', e)) {

@@ -1,5 +1,6 @@
-import { FantasyEditor } from './core/fantasy-editor';
-
-export default FantasyEditor;
 export * from './locale';
-export * from './common/types';
+export * from './common';
+export * from './components';
+export * from './core';
+export * from './locale';
+export * from './plugins';

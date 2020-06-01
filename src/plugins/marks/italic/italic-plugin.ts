@@ -1,5 +1,4 @@
-import { MARK_ITALIC, PluginOption } from '../../types';
-import { SlatePlugin } from '../../..';
+import {MARK_ITALIC, PluginOption, SlatePlugin} from '@/core/types';
 import { renderLeafItalic } from './render-leaf-italic';
 import { onKeyDownMark } from '../on-keydown-mark';
 

@@ -1,18 +1,17 @@
 import React, {useRef, useState} from 'react';
-import { RenderElement } from '../../..';
 import {
   BLOCK_TABLE,
   BLOCK_TABLE_CELL,
   BLOCK_TABLE_PRE,
   BLOCK_TABLE_ROW,
   BLOCK_TABLE_SUF,
-  BLOCK_TABLE_WRAP
-} from '../../types';
+  BLOCK_TABLE_WRAP, RenderElement
+} from '@/core/types';
 import './table.less';
 import {ReactEditor, RenderElementProps, useSelected, useSlate} from 'slate-react';
 import {TableSelectProvider, useTableSelect} from "@/plugins/blocks/table/table-select-context";
 import classNames from 'classnames';
-import {Editor, Transforms} from "slate";
+import {Transforms} from "slate";
 
 export const renderElementTable: RenderElement = ({ attributes, children, element }) => {
   if(element.type === BLOCK_TABLE_WRAP){

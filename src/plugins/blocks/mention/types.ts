@@ -1,6 +1,4 @@
-import { RenderElementProps } from 'slate-react';
-
-export interface MentionRenderElementProps extends RenderElementProps {
+export interface MentionRenderElementProps {
   prefix?: string;
   onClick?: (value: any) => void;
 }

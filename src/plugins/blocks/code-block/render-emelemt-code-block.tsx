@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_CODE, BLOCK_CODE_INLINE } from '../../types';
+import { RenderElement, BLOCK_CODE, BLOCK_CODE_INLINE } from '@/core/types';
 import './code-block.less';
 import { languages } from './constants';
 import { ReactEditor, useSlate } from 'slate-react';

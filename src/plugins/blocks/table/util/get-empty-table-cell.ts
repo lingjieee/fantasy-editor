@@ -1,4 +1,4 @@
-import { BLOCK_PARAGRAPH, BLOCK_TABLE_CELL } from '../../../types';
+import { BLOCK_PARAGRAPH, BLOCK_TABLE_CELL } from '@/core/types';
 
 export const getEmptyTableCell = () => ({
   type: BLOCK_TABLE_CELL,

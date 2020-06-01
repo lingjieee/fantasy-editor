@@ -1,5 +1,4 @@
-import { MARK_UNDERLINE, PluginOption } from '../../types';
-import { SlatePlugin } from '../../..';
+import {MARK_UNDERLINE, PluginOption, SlatePlugin} from '@/core/types';
 import { renderLeafUnderline } from './render-leaf-underline';
 import { onKeyDownMark } from '../on-keydown-mark';
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_HR } from '../../types';
+import {BLOCK_HR, RenderElement} from '@/core/types';
 import './hr.less';
 import { RenderElementProps, useFocused, useSelected } from 'slate-react';
 import classNames from 'classnames';

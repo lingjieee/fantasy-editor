@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_COLOR } from '../../types';
+import {MARK_COLOR, RenderLeaf} from '@/core/types';
 
 export const renderLeafFontColor: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_COLOR]) {

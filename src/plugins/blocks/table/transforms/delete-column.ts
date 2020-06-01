@@ -1,5 +1,5 @@
 import { Editor, Transforms } from 'slate';
-import { BLOCK_TABLE, BLOCK_TABLE_CELL } from '../../../types';
+import { BLOCK_TABLE, BLOCK_TABLE_CELL } from '@/core/types';
 
 export const deleteColumn = (editor: Editor) => {
   const currentCell = Editor.above(editor, {

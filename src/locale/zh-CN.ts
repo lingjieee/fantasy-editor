@@ -1,4 +1,4 @@
-import { Locale } from '@/common/types';
+import { Locale } from '@/core/types';
 
 export const zhCN: Locale = {
   locale: 'zh-CN',

@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_ALIGN_CENTER, BLOCK_ALIGN_JUSTIFY, BLOCK_ALIGN_LEFT, BLOCK_ALIGN_RIGHT } from '../../types';
+import { RenderElement, BLOCK_ALIGN_CENTER, BLOCK_ALIGN_JUSTIFY, BLOCK_ALIGN_LEFT, BLOCK_ALIGN_RIGHT } from '@/core/types';
 import './align.less';
 
 export const renderElementAlign: RenderElement = ({ attributes, children, element }) => {

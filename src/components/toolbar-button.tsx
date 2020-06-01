@@ -34,4 +34,4 @@ const ToolbarButton: FunctionComponent<Props> = forwardRef((props, ref) => {
   );
 });
 
-export default ToolbarButton;
+export {ToolbarButton};

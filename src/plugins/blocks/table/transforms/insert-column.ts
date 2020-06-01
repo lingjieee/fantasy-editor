@@ -1,5 +1,5 @@
 import { Editor, Path, Transforms } from 'slate';
-import { BLOCK_TABLE, BLOCK_TABLE_CELL } from '../../../types';
+import { BLOCK_TABLE, BLOCK_TABLE_CELL } from '@/core/types';
 import { getEmptyTableCell } from '../util/get-empty-table-cell';
 
 export const insertColumn = (editor: Editor, position: 'left' | 'right') => {

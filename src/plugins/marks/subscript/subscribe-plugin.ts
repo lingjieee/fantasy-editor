@@ -1,5 +1,4 @@
-import { MARK_SUBSCRIPT, PluginOption } from '../../types';
-import { SlatePlugin } from '../../..';
+import {MARK_SUBSCRIPT, PluginOption, SlatePlugin} from '@/core/types';
 import { renderLeafSubscript } from './render-leaf-subscript';
 import { onKeyDownMark } from '../on-keydown-mark';
 

@@ -1,5 +1,5 @@
 import {Editor, Transforms, Path, NodeEntry} from "slate";
-import {BLOCK_PARAGRAPH, BLOCK_TABLE_CELL, BLOCK_TABLE_PRE, BLOCK_TABLE_SUF, BLOCK_TABLE_WRAP} from "@/plugins/types";
+import {BLOCK_PARAGRAPH, BLOCK_TABLE_CELL, BLOCK_TABLE_PRE, BLOCK_TABLE_SUF, BLOCK_TABLE_WRAP} from "@/core/types";
 import {insertRow} from "@/plugins/blocks/table/transforms";
 
 export const getLastNode = (editor: Editor, lastPath: Path): NodeEntry => {

@@ -1,6 +1,5 @@
 import React from 'react';
-import {RenderElement} from "@/common/types";
-import {BLOCK_TASKLIST} from "@/plugins/types";
+import {BLOCK_TASK_LIST, RenderElement} from "@/core/types";
 import {ReactEditor, RenderElementProps, useEditor, useReadOnly} from "slate-react";
 import CheckBox from 'antd/lib/checkbox';
 import 'antd/lib/checkbox/style';
@@ -9,7 +8,7 @@ import classNames from 'classnames';
 import './style.less';
 
 export const renderElementTaskList:RenderElement = (props) => {
-  if(props.element.type === BLOCK_TASKLIST){
+  if(props.element.type === BLOCK_TASK_LIST){
     return <TaskListElement {...props} children={props.children}/>
   }
 }

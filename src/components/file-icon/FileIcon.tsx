@@ -47,4 +47,4 @@ const FileIcon: FunctionComponent<Props> = props => {
   return <img src={file} className={className} alt="" />;
 };
 
-export default FileIcon;
+export {FileIcon};

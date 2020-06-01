@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_SUPERSCRIPT } from '../../types';
+import {MARK_SUPERSCRIPT, RenderLeaf} from '@/core/types';
 
 export const renderLeafSuperscript: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_SUPERSCRIPT]) {

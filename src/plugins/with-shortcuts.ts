@@ -9,10 +9,10 @@ import {
   BLOCK_H6,
   BLOCK_LI,
   BLOCK_OL, BLOCK_PARAGRAPH,
-  BLOCK_QUOTE, BLOCK_TASKLIST,
+  BLOCK_QUOTE, BLOCK_TASK_LIST,
   BLOCK_UL,
-} from './types';
-import { toggleList } from '../utils/toggleList';
+} from '@/core/types';
+import { toggleList } from '@/utils/toggleList';
 import {isBlockActive} from "@/common/transforms";
 
 const SHORTCUTS: Record<string, string> = {
@@ -27,7 +27,7 @@ const SHORTCUTS: Record<string, string> = {
   '####': BLOCK_H4,
   '#####': BLOCK_H5,
   '######': BLOCK_H6,
-  '[]': BLOCK_TASKLIST,
+  '[]': BLOCK_TASK_LIST,
   '```': BLOCK_CODE,
 };
 

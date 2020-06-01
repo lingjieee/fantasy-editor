@@ -1,5 +1,4 @@
-import { MARK_BOLD, PluginOption } from '../../types';
-import { SlatePlugin } from '../../..';
+import {MARK_BOLD, PluginOption, SlatePlugin} from '@/core/types';
 import { renderLeafBold } from './render-leaf-bold';
 import { onKeyDownMark } from '../on-keydown-mark';
 

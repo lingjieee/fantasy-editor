@@ -396,6 +396,17 @@
       {
         "text": "bg-clor",
         "bg-color": "#f8e71c"
+      },
+      {
+        "text": " "
+      },
+      {
+        "type": "mention",
+        "value": "Adi Gallia",
+        "children": [{"text": ""}]
+      },
+      {
+        "text": ""
       }
     ]
   },

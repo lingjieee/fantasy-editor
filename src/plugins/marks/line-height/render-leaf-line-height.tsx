@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { RenderLeaf } from '../../../index';
-import { MARK_LINE_HEIGHT } from '../../types';
+import {MARK_LINE_HEIGHT, RenderLeaf} from '@/core/types';
 
 export const renderLeafLineHeight: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_LINE_HEIGHT]) {

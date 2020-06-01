@@ -48,4 +48,4 @@ const MentionSelect: FunctionComponent<MentionSelectProps> = ({ at, options, val
   );
 };
 
-export default MentionSelect;
+export {MentionSelect};

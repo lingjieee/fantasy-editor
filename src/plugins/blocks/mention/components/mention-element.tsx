@@ -1,10 +1,10 @@
 import React from 'react';
-import { useFocused, useSelected } from 'slate-react';
+import {RenderElementProps, useFocused, useSelected} from 'slate-react';
 import { MentionRenderElementProps } from '@/plugins/blocks/mention/types';
 import './style.less';
 import classNames from 'classnames';
 
-const MentionElement: React.FC<MentionRenderElementProps> = ({ attributes, children, element, prefix, onClick }) => {
+const MentionElement: React.FC<MentionRenderElementProps & RenderElementProps> = ({ attributes, children, element, prefix, onClick }) => {
   const selected = useSelected();
   const focused = useFocused();
 
@@ -23,4 +23,4 @@ const MentionElement: React.FC<MentionRenderElementProps> = ({ attributes, child
   );
 };
 
-export default MentionElement;
+export {MentionElement};

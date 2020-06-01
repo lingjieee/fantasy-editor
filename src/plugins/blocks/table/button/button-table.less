@@ -1,0 +1,27 @@
+@import '../../../../styles/theme';
+
+.fe-btn-tb-row {
+  border-top: 1px solid @border-color;
+  height: 21px;
+  &:last-child {
+    border-bottom: 1px solid @border-color;
+    height: 22px;
+  }
+}
+.fe-btn-tb-cell {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-left: 1px solid @border-color;
+  cursor: pointer;
+  &:last-child {
+    border-right: 1px solid @border-color;
+  }
+  &.active{
+    background-color: rgb(221, 238, 255);
+  }
+}
+
+.fe-btn-tb-tips {
+  text-align: center;
+}

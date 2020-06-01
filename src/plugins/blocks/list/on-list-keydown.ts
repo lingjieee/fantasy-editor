@@ -1,5 +1,5 @@
 import { Editor, Path, Transforms } from 'slate';
-import { BLOCK_LI, BLOCK_OL, BLOCK_UL } from '../../types';
+import { BLOCK_LI, BLOCK_OL, BLOCK_UL } from '@/core/types';
 
 const ListHotkey = {
   TAB: 'Tab',

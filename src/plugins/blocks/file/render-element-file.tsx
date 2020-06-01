@@ -2,9 +2,8 @@ import React from 'react';
 import { RenderElementProps, useFocused, useSelected } from 'slate-react';
 import classNames from 'classnames';
 import './file.less';
-import { RenderElement } from '../../..';
-import { BLOCK_FILE } from '../../types';
-import FileIcon from '../../../components/file-icon/FileIcon';
+import {BLOCK_FILE, RenderElement} from '@/core/types';
+import {FileIcon} from "@/components";
 
 export const renderElementFile: RenderElement = ({ attributes, children, element }) => {
   if (element.type === BLOCK_FILE) {

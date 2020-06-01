@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_STRIKE_THROUGH } from '../../types';
+import {MARK_STRIKE_THROUGH, RenderLeaf} from '@/core/types';
 
 export const renderLeafStrikeThrough: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_STRIKE_THROUGH]) {

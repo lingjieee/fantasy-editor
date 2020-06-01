@@ -1,6 +1,6 @@
 import { Editor, Transforms } from 'slate';
 import { isBlockActive } from '@/common/transforms';
-import {BLOCK_TABLE_WRAP} from '../../../types';
+import {BLOCK_TABLE_WRAP} from '@/core/types';
 import { getEmptyTable } from '../util/get-empty-table';
 
 export const insertTable = (editor: Editor, row: number, col: number) => {

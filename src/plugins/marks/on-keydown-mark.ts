@@ -1,6 +1,6 @@
 import { Editor } from 'slate';
 import isHotkey from 'is-hotkey';
-import { toggleMark } from '../../common/transforms';
+import { toggleMark } from '@/common/transforms';
 
 export function onKeyDownMark(type: string, hotkey?: string, clear?: string) {
   if (!hotkey) {

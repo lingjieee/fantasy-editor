@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_CODE } from '../../types';
+import {MARK_CODE, RenderLeaf} from '@/core/types';
 import './code.less';
 
 export const renderLeafCode: RenderLeaf = ({ leaf, children }) => {

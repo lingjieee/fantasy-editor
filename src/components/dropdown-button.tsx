@@ -1,6 +1,6 @@
 import React, { forwardRef, FunctionComponent, MouseEventHandler } from 'react';
-import ToolbarButton from './toolbar-button';
-import { ReactComponent as CertDown } from '../assets/svg/cert-down.svg';
+import {ToolbarButton} from './toolbar-button';
+import { ReactComponent as CertDown } from '@/assets/svg/cert-down.svg';
 import classNames from 'classnames';
 import './dropdown-button.less';
 
@@ -25,4 +25,4 @@ const DropdownButton: FunctionComponent<Props> = forwardRef((props, ref) => {
   );
 });
 
-export default DropdownButton;
+export {DropdownButton};

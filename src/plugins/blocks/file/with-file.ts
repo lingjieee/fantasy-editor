@@ -1,4 +1,4 @@
-import { BLOCK_FILE } from '../../types';
+import { BLOCK_FILE } from '@/core/types';
 import { ReactEditor } from 'slate-react';
 import { withVoid } from '../../with-void';
 import isPromise from 'is-promise';

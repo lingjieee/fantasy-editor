@@ -1,5 +1,5 @@
 import { Editor, Transforms } from 'slate';
-import { BLOCK_FILE, BLOCK_IMAGE } from '../../plugins/types';
+import { BLOCK_FILE, BLOCK_IMAGE } from '../../core/types';
 
 export interface FileProps {
   name: string;

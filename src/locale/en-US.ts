@@ -1,4 +1,4 @@
-import { Locale } from '..';
+import { Locale } from '@/core/types';
 
 export const enUS: Locale = {
   locale: 'en-US',

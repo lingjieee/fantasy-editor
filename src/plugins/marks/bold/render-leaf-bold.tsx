@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_BOLD } from '../../types';
+import {MARK_BOLD, RenderLeaf} from '@/core/types';
 
 export const renderLeafBold: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_BOLD]) {

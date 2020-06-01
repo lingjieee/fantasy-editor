@@ -1,5 +1,5 @@
 import { Editor, Transforms } from 'slate';
-import { BLOCK_TABLE_ROW } from '../../../types';
+import { BLOCK_TABLE_ROW } from '@/core/types';
 
 export const deleteRow = (editor: Editor) => {
   const currentRow = Editor.above(editor, {

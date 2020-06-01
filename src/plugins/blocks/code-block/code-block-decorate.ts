@@ -1,6 +1,6 @@
 import { languages, Token, tokenize } from 'prismjs';
 import { Editor, NodeEntry, Node } from 'slate';
-import { BLOCK_CODE_INLINE } from '../../types';
+import { BLOCK_CODE_INLINE } from '@/core/types';
 import 'prismjs/components/prism-antlr4';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-c';

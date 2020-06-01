@@ -1,7 +1,7 @@
 import { Editor, Transforms } from 'slate';
 import isHotkey from 'is-hotkey';
-import { BLOCK_H1, BLOCK_H2, BLOCK_H3, BLOCK_H4, BLOCK_H5, BLOCK_H6, BLOCK_PARAGRAPH } from '../../types';
-import { findBlockActive } from '../../../common/transforms';
+import { BLOCK_H1, BLOCK_H2, BLOCK_H3, BLOCK_H4, BLOCK_H5, BLOCK_H6, BLOCK_PARAGRAPH } from '@/core/types';
+import { findBlockActive } from '@/common/transforms';
 
 const headingList = [BLOCK_H1, BLOCK_H2, BLOCK_H3, BLOCK_H4, BLOCK_H5, BLOCK_H6];
 

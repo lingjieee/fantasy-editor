@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_INDENT } from '../../types';
+import {BLOCK_INDENT, RenderElement} from '@/core/types';
 
 export const renderElementIdent: RenderElement = ({ attributes, children, element }) => {
   if (element.type === BLOCK_INDENT) {

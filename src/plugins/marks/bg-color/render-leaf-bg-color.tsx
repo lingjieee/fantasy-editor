@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_BG_COLOR } from '../../types';
+import {MARK_BG_COLOR, RenderLeaf} from '@/core/types';
 
 export const renderLeafBgColor: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_BG_COLOR]) {

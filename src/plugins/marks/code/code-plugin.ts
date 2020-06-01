@@ -1,5 +1,4 @@
-import { MARK_CODE, PluginOption } from '../../types';
-import { SlatePlugin } from '../../..';
+import {MARK_CODE, PluginOption, SlatePlugin} from '@/core/types';
 import { renderLeafCode } from './render-leaf-code';
 import { onKeyDownMark } from '../on-keydown-mark';
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_LI, BLOCK_OL, BLOCK_UL } from '../../types';
+import {BLOCK_LI, BLOCK_OL, BLOCK_UL, RenderElement} from '@/core/types';
 
 export const renderElementList: RenderElement = ({ attributes, children, element }) => {
   if (element.type === BLOCK_UL) {

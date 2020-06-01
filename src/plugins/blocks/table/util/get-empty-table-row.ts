@@ -1,4 +1,4 @@
-import { BLOCK_TABLE_ROW } from '../../../types';
+import { BLOCK_TABLE_ROW } from '@/core/types';
 import { getEmptyTableCell } from './get-empty-table-cell';
 
 export const getEmptyTableRow = (count: number) => ({

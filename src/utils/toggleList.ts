@@ -1,5 +1,5 @@
 import { isBlockActive } from '../common/transforms';
-import { BLOCK_LI, BLOCK_PARAGRAPH } from '../plugins/types';
+import { BLOCK_LI, BLOCK_PARAGRAPH } from '../core/types';
 import { Editor, Transforms } from 'slate';
 
 export const toggleList = (editor: Editor, type: string) => {

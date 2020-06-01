@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import { Decorate, OnDOMBeforeInput, OnKeyDown, RenderElement, RenderLeaf, SlatePlugin } from '@/common/types';
+import { Decorate, OnDOMBeforeInput, OnKeyDown, RenderElement, RenderLeaf, SlatePlugin } from '@/core/types';
 import { Editable, useSlate } from 'slate-react';
 import { decoratePlugins } from '@/utils/decorate-plugins';
 import { onDOMBeforeInputPlugins } from '@/utils/on-dom-before-input-plugins';
 import { renderElementPlugins } from '@/utils/render-element-plugins';
 import { renderLeafPlugins } from '@/utils/render-leaf-plugins';
 import { onKeydownPlugins } from '@/utils/on-keydown-plugins';
-import { useLocale } from '@/common/locale-provider';
+import { useLocale } from '@/core/context/locale-provider';
 
 export interface PluginEditorProps {
   [key: string]: any;

@@ -1,6 +1,6 @@
 import { Editor } from 'slate';
 import { withVoid } from '@/plugins/with-void';
-import { BLOCK_MENTION } from '@/plugins/types';
+import { BLOCK_MENTION } from '@/core/types';
 import { withInline } from '@/plugins/with-inline';
 
 export const withMention = () => <T extends Editor>(editor: T) => {

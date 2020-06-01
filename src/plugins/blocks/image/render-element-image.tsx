@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_IMAGE } from '../../types';
+import {BLOCK_IMAGE, RenderElement} from '@/core/types';
 import { RenderElementProps, useFocused, useSelected } from 'slate-react';
 import './image.module.less';
 import classNames from 'classnames';

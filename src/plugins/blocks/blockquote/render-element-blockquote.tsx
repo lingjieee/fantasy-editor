@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_QUOTE } from '../../types';
+import {BLOCK_QUOTE, RenderElement} from '@/core/types';
 import './blockquote.less';
 
 export const renderElementBlockQuote: RenderElement = ({ attributes, children, element }) => {

@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_H1, BLOCK_H2, BLOCK_H3, BLOCK_H4, BLOCK_H5, BLOCK_H6 } from '../../types';
+import {BLOCK_H1, BLOCK_H2, BLOCK_H3, BLOCK_H4, BLOCK_H5, BLOCK_H6, RenderElement} from '@/core/types';
 
 export const renderElementHeading: RenderElement = ({ attributes, children, element }) => {
   if (element.type === BLOCK_H1) {

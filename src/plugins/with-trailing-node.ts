@@ -1,6 +1,6 @@
 import { Editor, Path, Transforms } from 'slate';
-import { getLastNode } from '../utils/get-last-node';
-import { BLOCK_IMAGE, BLOCK_PARAGRAPH, BLOCK_TABLE } from './types';
+import { getLastNode } from '@/utils/get-last-node';
+import { BLOCK_IMAGE, BLOCK_PARAGRAPH, BLOCK_TABLE } from '@/core/types';
 
 export const withTrailingNode = () => <T extends Editor>(editor: T) => {
   const { normalizeNode } = editor;

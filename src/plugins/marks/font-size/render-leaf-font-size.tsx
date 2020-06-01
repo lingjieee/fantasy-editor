@@ -1,6 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_FONT_SIZE } from '../../types';
+import {MARK_FONT_SIZE, RenderLeaf} from '@/core/types';
 
 export const renderLeafFontSize: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_FONT_SIZE]) {

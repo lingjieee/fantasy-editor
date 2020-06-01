@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_ITALIC } from '../../types';
+import {MARK_ITALIC, RenderLeaf} from '@/core/types';
 
 export const renderLeafItalic: RenderLeaf = ({ leaf, children }) => {
   if (leaf[MARK_ITALIC]) {

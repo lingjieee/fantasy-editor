@@ -1,5 +1,5 @@
 import { Editor, Path, Transforms } from 'slate';
-import { BLOCK_TABLE_ROW } from '../../../types';
+import { BLOCK_TABLE_ROW } from '@/core/types';
 import { getEmptyTableRow } from '../util/get-empty-table-row';
 
 export const insertRow = (editor: Editor, position: 'top' | 'bottom') => {

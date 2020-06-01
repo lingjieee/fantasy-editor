@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderElement } from '../../..';
-import { BLOCK_LINK } from '../../types';
+import {BLOCK_LINK, RenderElement} from '@/core/types';
 
 export const renderElementLink: RenderElement = ({ attributes, children, element }) => {
   if (element.type === BLOCK_LINK) {

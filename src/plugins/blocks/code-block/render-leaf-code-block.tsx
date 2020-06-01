@@ -1,6 +1,5 @@
 import React from 'react';
-import { RenderLeaf } from '../../..';
-import { MARK_PRISM } from '../../types';
+import {MARK_PRISM, RenderLeaf} from '@/core/types';
 import 'prismjs/themes/prism.css';
 
 export const renderLeafCodeBlock: RenderLeaf = ({ leaf, children }) => {

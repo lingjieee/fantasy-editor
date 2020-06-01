@@ -1,5 +1,4 @@
-import { MARK_STRIKE_THROUGH, PluginOption } from '../../types';
-import { SlatePlugin } from '../../..';
+import {MARK_STRIKE_THROUGH, PluginOption, SlatePlugin} from '@/core/types';
 import { renderLeafStrikeThrough } from './render-leaf-strike-through';
 import { onKeyDownMark } from '../on-keydown-mark';
 

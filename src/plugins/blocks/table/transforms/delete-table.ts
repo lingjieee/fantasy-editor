@@ -1,5 +1,5 @@
 import { Editor, Transforms } from 'slate';
-import { BLOCK_TABLE } from '../../../types';
+import { BLOCK_TABLE } from '@/core/types';
 
 export const deleteTable = (editor: Editor) => {
   const match = Editor.above(editor, {
