@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: doc deploy
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: |
+        npm run install
+        npm run docs:build
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GH_PAGES }}
+        publish_dir: ./dist
