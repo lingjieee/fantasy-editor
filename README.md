@@ -4,7 +4,7 @@ English | [简体中文](README.zh-CN.md)
 
 <div align="center">
 
-A Rich Text Editor Based On [G6](https://github.com/antvis/g6) and [React](https://github.com/facebook/react).
+A Rich Text Editor Based On [Slate](https://github.com/ianstormtaylor/slate) and [React](https://github.com/facebook/react).
 
 [![GitHub](https://img.shields.io/github/license/lingjieee/fantasy-editor)](LICENSE)
 [![npm](https://img.shields.io/npm/v/fantasy-editor)](https://www.npmjs.com/package/fantasy-editor)
