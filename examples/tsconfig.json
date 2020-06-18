@@ -8,6 +8,6 @@
     "noImplicitThis": true,
     "strictBindCallApply": true,
     "baseUrl": ".",
-    "sourceMap": true,
+    "sourceMap": true
   }
 }

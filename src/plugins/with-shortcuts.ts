@@ -14,6 +14,7 @@ import {
 } from '@/core/types';
 import { toggleList } from '@/utils/toggleList';
 import {isBlockActive} from "@/common/transforms";
+import {languages} from './blocks/code-block/constants';
 
 const SHORTCUTS: Record<string, string> = {
   '*': BLOCK_LI,
@@ -28,7 +29,6 @@ const SHORTCUTS: Record<string, string> = {
   '#####': BLOCK_H5,
   '######': BLOCK_H6,
   '[]': BLOCK_TASK_LIST,
-  '```': BLOCK_CODE,
 };
 
 export const withShortcuts = () => <T extends Editor>(editor: T) => {
@@ -50,7 +50,42 @@ export const withShortcuts = () => <T extends Editor>(editor: T) => {
         Transforms.select(editor, range);
         Transforms.delete(editor);
         if (type !== BLOCK_LI) {
-          if(type===BLOCK_CODE){
+          Transforms.setNodes(
+            editor,
+            { type },
+            {
+              match: n => Editor.isBlock(editor, n),
+            },
+          );
+        } else {
+          const type = beforeText === '1.' ? BLOCK_OL : BLOCK_UL;
+          toggleList(editor, type);
+        }
+        return;
+      }else if(beforeText.startsWith('```')){
+        if(beforeText==='```'){
+          Transforms.select(editor, range);
+          Transforms.delete(editor);
+          const active = isBlockActive(editor, BLOCK_CODE);
+          Transforms.unwrapNodes(editor, {
+            match: (n: any) => n.type === BLOCK_CODE,
+          });
+          Transforms.setNodes(editor, {
+            type: active ? BLOCK_PARAGRAPH : BLOCK_CODE_INLINE,
+          });
+          if (!active) {
+            Transforms.wrapNodes(editor, {
+              type: BLOCK_CODE,
+              lang: 'markup',
+              children: [],
+            });
+          }
+          return;
+        }else{
+          const lang = beforeText.replace('```', '');
+          if(languages[lang]){
+            Transforms.select(editor, range);
+            Transforms.delete(editor);
             const active = isBlockActive(editor, BLOCK_CODE);
             Transforms.unwrapNodes(editor, {
               match: (n: any) => n.type === BLOCK_CODE,
@@ -61,26 +96,16 @@ export const withShortcuts = () => <T extends Editor>(editor: T) => {
             if (!active) {
               Transforms.wrapNodes(editor, {
                 type: BLOCK_CODE,
-                lang: 'markup',
+                lang: lang,
                 children: [],
               });
             }
-          }else{
-            Transforms.setNodes(
-              editor,
-              { type },
-              {
-                match: n => Editor.isBlock(editor, n),
-              },
-            );
+            return;
           }
-        } else {
-          const type = beforeText === '1.' ? BLOCK_OL : BLOCK_UL;
-          toggleList(editor, type);
         }
-        return;
       }
     }
+    console.log('insert')
     insertText(text);
   };
 
