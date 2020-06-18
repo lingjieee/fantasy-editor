@@ -45,6 +45,7 @@ import {
   withMention,
   withShortcuts,
   withTrailingNode,
+  withTable,
   withVoid,
   LocaleProvider,
   FullPageProvider,
@@ -75,7 +76,7 @@ import {
   ButtonIdentInc,
   ButtonIdentDec,
   ButtonLineHeight,
-  ButtonLink, ButtonImage, ButtonFile, ButtonTable, ButtonHr, ButtonFull, ButtonTaskList
+  ButtonLink, ButtonImage, ButtonFile, ButtonTable, ButtonHr, ButtonFull, ButtonTaskList,
 } from "fantasy-editor";
 
 const withPlugins = [
@@ -88,6 +89,7 @@ const withPlugins = [
   withVoid([BLOCK_HR]),
   withShortcuts(),
   withMention(),
+  withTable(),
 ];
 
 const FullDemo: FunctionComponent = () => {
