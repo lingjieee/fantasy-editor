@@ -170,7 +170,7 @@ const serialize = (node:Node, listLevel?:number, liIdx?:number) => {
   }
 }
 
-export const serializeMarkdown = (nodes:Node) => {
+export const serializeMarkdown = (nodes:Node[]) => {
   const editor = {
     children: nodes
   }
