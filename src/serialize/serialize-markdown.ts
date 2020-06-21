@@ -43,7 +43,7 @@ import {
 
 const serialize = (node:Node, listLevel?:number, liIdx?:number) => {
   if(Text.isText(node)){
-    let result = node.text?.replaceAll('\n', '  \n')||node.text;
+    let result = node.text?.replaceAll?.('\n', '  \n')||node.text;
     if(node[MARK_BOLD]){
       result = `**${result}**`
     }
@@ -105,7 +105,7 @@ const serialize = (node:Node, listLevel?:number, liIdx?:number) => {
     case BLOCK_PARAGRAPH:
       return `${children}  \n`
     case BLOCK_QUOTE:
-      return `> ${children?.replaceAll('\n', '\n> ')||children}\n\n`
+      return `> ${children?.replaceAll?.('\n', '\n> ')||children}\n\n`
     case BLOCK_ALIGN_LEFT:
       return `<div style="text-align: left">${children}</div>\n`
     case BLOCK_ALIGN_CENTER:
