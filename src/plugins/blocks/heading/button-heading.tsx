@@ -81,7 +81,11 @@ const ButtonHeading: FunctionComponent<Props> = props => {
   );
 
   return (
-    <Dropdown trigger={['click']} overlay={menu} visible={visible} onVisibleChange={setVisible}>
+    <Dropdown trigger={['click']}
+              overlay={menu}
+              visible={visible}
+              disabled={isBlockActive(editor, BLOCK_CODE)}
+              onVisibleChange={setVisible}>
       <DropdownButton width={100} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
         {value === BLOCK_H1
           ? h1

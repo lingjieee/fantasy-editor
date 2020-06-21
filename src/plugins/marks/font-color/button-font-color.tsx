@@ -68,8 +68,10 @@ const ButtonFontColor: FunctionComponent<Props> = props => {
       visible={visible}
       overlayClassName="fc-btn-font-overlay"
       onVisibleChange={setVisible}
+      disabled={isBlockActive(editor, BLOCK_CODE)}
     >
-      <DropdownButton width={45} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
+      <DropdownButton width={45} onMouseDown={show}
+                      disabled={isBlockActive(editor, BLOCK_CODE)}>
         <IconFontColor />
       </DropdownButton>
     </Dropdown>

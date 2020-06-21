@@ -14,6 +14,7 @@ import {
 } from '@/core/types';
 import { toggleList } from '@/utils/toggleList';
 import {languages} from './blocks/code-block/constants';
+import {isBlockActive} from "@/common";
 
 const SHORTCUTS: Record<string, string> = {
   '*': BLOCK_LI,
@@ -35,51 +36,54 @@ export const withShortcuts = () => <T extends Editor>(editor: T) => {
   editor.insertText = text => {
     const { selection } = editor;
     if (text === ' ' && selection && Range.isCollapsed(selection)) {
-      const { anchor } = selection;
-      const block = Editor.above(editor, {
-        match: n => Editor.isBlock(editor, n),
-      });
-      const path = block ? block[1] : [];
-      const start = Editor.start(editor, path);
-      const range = { anchor, focus: start };
-      const beforeText = Editor.string(editor, range);
+      let isInCodeBlock = isBlockActive(editor, BLOCK_CODE);
+      if(!isInCodeBlock){
+        const { anchor } = selection;
+        const block = Editor.above(editor, {
+          match: n => Editor.isBlock(editor, n),
+        });
+        const path = block ? block[1] : [];
+        const start = Editor.start(editor, path);
+        const range = { anchor, focus: start };
+        const beforeText = Editor.string(editor, range);
 
-      const type = SHORTCUTS[beforeText];
-      if (type) {
-        Transforms.select(editor, range);
-        Transforms.delete(editor);
-        if (type !== BLOCK_LI) {
-          Transforms.setNodes(
-            editor,
-            { type },
-            {
-              match: n => Editor.isBlock(editor, n),
-            },
-          );
-        } else {
-          const type = beforeText === '1.' ? BLOCK_OL : BLOCK_UL;
-          toggleList(editor, type);
-        }
-        return;
-      }else if(beforeText.startsWith('```')){
-        if(beforeText==='```'){
+        const type = SHORTCUTS[beforeText];
+        if (type) {
           Transforms.select(editor, range);
           Transforms.delete(editor);
-          Transforms.setNodes(editor, {
-            type: BLOCK_CODE,
-            lang: 'markup',
-          });
+          if (type !== BLOCK_LI) {
+            Transforms.setNodes(
+              editor,
+              { type },
+              {
+                match: n => Editor.isBlock(editor, n),
+              },
+            );
+          } else {
+            const type = beforeText === '1.' ? BLOCK_OL : BLOCK_UL;
+            toggleList(editor, type);
+          }
           return;
-        }else{
-          const lang = beforeText.replace('```', '');
-          if(languages[lang]){
+        }else if(beforeText.startsWith('```')){
+          if(beforeText==='```'){
             Transforms.select(editor, range);
             Transforms.delete(editor);
             Transforms.setNodes(editor, {
               type: BLOCK_CODE,
-              lang: lang,
+              lang: 'markup',
             });
             return;
+          }else{
+            const lang = beforeText.replace('```', '');
+            if(languages[lang]){
+              Transforms.select(editor, range);
+              Transforms.delete(editor);
+              Transforms.setNodes(editor, {
+                type: BLOCK_CODE,
+                lang: lang,
+              });
+              return;
+            }
           }
         }
       }

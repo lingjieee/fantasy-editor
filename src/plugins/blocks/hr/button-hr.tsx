@@ -2,8 +2,9 @@ import React, { FunctionComponent } from 'react';
 import { ReactComponent as IconHr } from '../../../assets/svg/hr.svg';
 import { useSlate } from 'slate-react';
 import { Editor, Range, Transforms } from 'slate';
-import { BLOCK_HR, BLOCK_PARAGRAPH } from '@/core/types';
+import {BLOCK_CODE, BLOCK_HR, BLOCK_PARAGRAPH} from '@/core/types';
 import {ToolbarButton} from "@/components";
+import {isBlockActive} from "@/common";
 
 interface OwnProps {}
 
@@ -48,7 +49,9 @@ const ButtonHr: FunctionComponent<Props> = props => {
   };
 
   return (
-    <ToolbarButton onMouseDown={insertHr}>
+    <ToolbarButton
+      disabled={isBlockActive(editor, BLOCK_CODE)}
+      onMouseDown={insertHr}>
       <IconHr />
     </ToolbarButton>
   );

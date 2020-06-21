@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { ReactComponent as IconIdentDec } from '../../../assets/svg/outdent.svg';
 import { Editor, Transforms } from 'slate';
-import { BLOCK_INDENT } from '@/core/types';
+import {BLOCK_CODE, BLOCK_INDENT} from '@/core/types';
 import { isBlockActive } from '@/common/transforms';
 import { useSlate } from 'slate-react';
 import {ToolbarButton} from "@/components";
@@ -39,7 +39,8 @@ const ButtonIdentDec: FunctionComponent<Props> = props => {
   };
 
   return (
-    <ToolbarButton onMouseDown={toggleIdent} disabled={!isBlockActive(editor, BLOCK_INDENT)}>
+    <ToolbarButton onMouseDown={toggleIdent}
+                   disabled={!isBlockActive(editor, BLOCK_INDENT)||isBlockActive(editor, BLOCK_CODE)}>
       <IconIdentDec />
     </ToolbarButton>
   );

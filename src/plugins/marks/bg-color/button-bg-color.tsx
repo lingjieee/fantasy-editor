@@ -68,8 +68,10 @@ const ButtonBgColor: FunctionComponent<Props> = props => {
       visible={visible}
       overlayClassName="fc-btn-bg-overlay"
       onVisibleChange={setVisible}
+      disabled={isBlockActive(editor, BLOCK_CODE)}
     >
-      <DropdownButton width={45} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
+      <DropdownButton width={45} onMouseDown={show}
+                      disabled={isBlockActive(editor, BLOCK_CODE)}>
         <IconBgColor />
       </DropdownButton>
     </Dropdown>

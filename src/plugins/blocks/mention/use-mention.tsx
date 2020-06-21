@@ -2,6 +2,8 @@ import { MentionNodeData, UseMentionOptions } from '@/plugins/blocks/mention/typ
 import { useCallback, useState } from 'react';
 import { Editor, Point, Range, Transforms } from 'slate';
 import { insertMention } from '@/plugins/blocks/mention/insert-mentions';
+import {isBlockActive} from "@/common";
+import {BLOCK_CODE} from "@/core";
 
 const getNextIndex = (i: number, max: number) => (i >= max ? 0 : i + 1);
 const getPreviousIndex = (i: number, max: number) => (i <= 0 ? max : i - 1);
@@ -91,9 +93,9 @@ export const useMention = (
   const onChangeMention = useCallback(
     (editor: Editor) => {
       const { selection } = editor;
-      if (selection && Range.isCollapsed(selection)) {
+      let isInCodeBlock = isBlockActive(editor, BLOCK_CODE);
+      if (selection && Range.isCollapsed(selection) && !isInCodeBlock) {
         const cursor = Range.start(selection);
-
         const { range, match: beforeMatch } = isWordAfterTrigger(editor, {
           at: cursor,
           trigger,

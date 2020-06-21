@@ -5,6 +5,8 @@ import { insertFile, insertImage, mockUpload } from '@/utils/tools/file-tool';
 import isPromise from 'is-promise';
 import { ReactComponent as IconFile } from '../../../assets/svg/file.svg';
 import {ToolbarButton} from "@/components";
+import {isBlockActive} from "@/common";
+import {BLOCK_CODE} from "@/core";
 
 interface OwnProps {}
 
@@ -57,7 +59,7 @@ const ButtonFile: FunctionComponent<Props> = props => {
   };
 
   return (
-    <ToolbarButton onMouseDown={handleMouseDown}>
+    <ToolbarButton onMouseDown={handleMouseDown} disabled={isBlockActive(editor, BLOCK_CODE)}>
       <IconFile />
     </ToolbarButton>
   );

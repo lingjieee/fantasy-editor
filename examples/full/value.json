@@ -167,7 +167,7 @@
     ]
   },
   {
-    "type": "tasklist",
+    "type": "task-list",
     "children": [
       {
         "text": "task1"
@@ -175,7 +175,7 @@
     ]
   },
   {
-    "type": "tasklist",
+    "type": "task-list",
     "children": [
       {
         "text": "task2"
@@ -184,7 +184,7 @@
     "checked": true
   },
   {
-    "type": "tasklist",
+    "type": "task-list",
     "children": [
       {
         "text": "task3"

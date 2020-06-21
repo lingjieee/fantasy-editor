@@ -58,7 +58,9 @@ const ButtonFontSize: FunctionComponent<Props> = props => {
   );
 
   return (
-    <Dropdown trigger={['click']} overlay={menu} visible={visible} onVisibleChange={setVisible}>
+    <Dropdown trigger={['click']} overlay={menu}
+              disabled={isBlockActive(editor, BLOCK_CODE)}
+              visible={visible} onVisibleChange={setVisible}>
       <DropdownButton width={60} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
         {value}
       </DropdownButton>

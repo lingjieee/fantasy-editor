@@ -56,7 +56,9 @@ const ButtonLineHeight: FunctionComponent<Props> = props => {
   );
 
   return (
-    <Dropdown trigger={['click']} overlay={menu} visible={visible} onVisibleChange={setVisible}>
+    <Dropdown trigger={['click']} overlay={menu}
+              disabled={isBlockActive(editor, BLOCK_CODE)}
+              visible={visible} onVisibleChange={setVisible}>
       <DropdownButton width={45} onMouseDown={show} disabled={isBlockActive(editor, BLOCK_CODE)}>
         <IconLineHeight />
       </DropdownButton>

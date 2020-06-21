@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { ReactComponent as IconQuote } from '../../../assets/svg/quote.svg';
 import { useSlate } from 'slate-react';
 import { isBlockActive } from '@/common/transforms';
-import { BLOCK_QUOTE } from '@/core/types';
+import {BLOCK_CODE, BLOCK_QUOTE} from '@/core/types';
 import { Transforms } from 'slate';
 import {ToolbarButton} from "@/components";
 
@@ -28,7 +28,9 @@ const ButtonBlockQuote: FunctionComponent<Props> = props => {
   };
 
   return (
-    <ToolbarButton onMouseDown={toggleBlock} active={isBlockActive(editor, BLOCK_QUOTE)}>
+    <ToolbarButton onMouseDown={toggleBlock}
+                   disabled={isBlockActive(editor, BLOCK_CODE)}
+                   active={isBlockActive(editor, BLOCK_QUOTE)}>
       <IconQuote />
     </ToolbarButton>
   );

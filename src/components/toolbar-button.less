@@ -24,8 +24,17 @@
   }
   &.disable {
     svg {
-      fill: @button-disable-color;
+      fill: @button-disable-color !important;
+      stroke: @button-disable-color !important;
+      rect{
+        fill: #ccc;
+        stroke: #ccc;
+      }
+      path{
+        fill: #ccc;
+      }
     }
+    color: #ccc;
     &:hover {
       background-color: transparent;
     }

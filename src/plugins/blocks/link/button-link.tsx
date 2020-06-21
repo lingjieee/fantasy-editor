@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
 import { ReactComponent as IconLink } from '../../../assets/svg/link.svg';
 import { isBlockActive } from '@/common/transforms';
 import { ReactEditor, useSlate } from 'slate-react';
-import { BLOCK_LINK } from '@/core/types';
+import {BLOCK_CODE, BLOCK_LINK} from '@/core/types';
 import { Transforms, Range } from 'slate';
 import './button-link.less';
 import Popover from 'antd/lib/popover';
@@ -83,7 +83,9 @@ const ButtonLink: FunctionComponent<Props> = props => {
       trigger={['click']}
       placement="bottom"
     >
-      <ToolbarButton onMouseDown={toggleLink} active={isBlockActive(editor, BLOCK_LINK)}>
+      <ToolbarButton onMouseDown={toggleLink}
+                     disabled={isBlockActive(editor, BLOCK_CODE)}
+                     active={isBlockActive(editor, BLOCK_LINK)}>
         <IconLink />
       </ToolbarButton>
     </Popover>

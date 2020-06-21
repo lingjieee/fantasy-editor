@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import {ReactComponent as IconTask} from '../../../assets/svg/tasklist.svg';
 import {useSlate} from "slate-react";
 import {isBlockActive, toggleBlock} from "@/common/transforms";
-import {BLOCK_TASK_LIST} from "@/core/types";
+import {BLOCK_CODE, BLOCK_TASK_LIST} from "@/core/types";
 import {ToolbarButton} from "@/components";
 
 interface OwnProps {}
@@ -17,6 +17,7 @@ const ButtonTaskList: FunctionComponent<Props> = (props) => {
     <ToolbarButton
       onMouseDown={()=>toggleBlock(editor, BLOCK_TASK_LIST)}
       active={isBlockActive(editor, BLOCK_TASK_LIST)}
+      disabled={isBlockActive(editor, BLOCK_CODE)}
     >
       <IconTask/>
     </ToolbarButton>

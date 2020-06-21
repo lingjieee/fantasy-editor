@@ -5,7 +5,7 @@ import 'antd/lib/popover/style';
 import { Range, Transforms } from 'slate';
 import { ReactEditor, useSlate } from 'slate-react';
 import { isBlockActive } from '@/common/transforms';
-import {BLOCK_TABLE_WRAP} from '@/core/types';
+import {BLOCK_CODE, BLOCK_TABLE_WRAP} from '@/core/types';
 import classNames from 'classnames';
 import { insertTable } from '../transforms';
 import {ButtonInsertRowTop} from './button-insert-row-top';
@@ -52,7 +52,9 @@ const ButtonTable: FunctionComponent<Props> = props => {
         trigger={['click']}
         placement="bottomLeft"
       >
-        <ToolbarButton onMouseDown={show} active={active}>
+        <ToolbarButton onMouseDown={show}
+                       disabled={isBlockActive(editor, BLOCK_CODE)}
+                       active={active}>
           <IconTable />
         </ToolbarButton>
       </Popover>
