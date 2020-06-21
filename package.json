@@ -50,8 +50,10 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.1",
+    "@types/escape-html": "^1.0.0",
     "antd": "^4.2.5",
     "classnames": "^2.2.6",
+    "escape-html": "^1.0.3",
     "immutable": "^4.0.0-rc.12",
     "is-hotkey": "^0.1.6",
     "is-promise": "^4.0.0",

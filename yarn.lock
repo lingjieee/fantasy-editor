@@ -1697,6 +1697,11 @@
   resolved "https://registry.npm.taobao.org/@types/ejs/download/@types/ejs-3.0.2.tgz#b2eb8ac59af7057da7d93a37c54fee763e17b9bd"
   integrity sha1-suuKxZr3BX2n2To3xU/udj4Xub0=
 
+"@types/escape-html@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/@types/escape-html/download/@types/escape-html-1.0.0.tgz#9135124510b0930b664255149e59ed750fc11f65"
+  integrity sha1-kTUSRRCwkwtmQlUUnlntdQ/BH2U=
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@types/eslint-visitor-keys/download/@types/eslint-visitor-keys-1.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Feslint-visitor-keys%2Fdownload%2F%40types%2Feslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -5362,7 +5367,7 @@ es6-weak-map@^2.0.2:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
-escape-html@~1.0.3:
+escape-html@^1.0.3, escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/escape-html/download/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=

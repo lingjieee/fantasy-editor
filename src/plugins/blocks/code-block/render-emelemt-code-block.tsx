@@ -18,12 +18,12 @@ export const renderElementCodeBlock: RenderElement = ({ attributes, children, el
 };
 
 const CodeBlock: React.FC<any> = forwardRef((props, ref) => {
-  const { children, ...rest } = props;
-  const lang = props.element.lang || 'markup';
+  const { children, element, ...rest } = props;
+  const lang = element.lang || 'markup';
   const editor = useSlate();
 
   const changeLang = (value: any) => {
-    const path = ReactEditor.findPath(editor, props.element);
+    const path = ReactEditor.findPath(editor, element);
     if (value) {
       Transforms.setNodes(
         editor,
@@ -40,8 +40,8 @@ const CodeBlock: React.FC<any> = forwardRef((props, ref) => {
 
   return (
     <div className="fc-code-block">
-      <pre {...rest} ref={ref} key={lang}>
-        <code>{children}</code>
+      <pre {...rest} ref={ref} className={`language-${lang}`} key={lang}>
+        <code className={`language-${lang}`}>{children}</code>
       </pre>
       <div contentEditable="false" suppressContentEditableWarning className="select">
         <Select
