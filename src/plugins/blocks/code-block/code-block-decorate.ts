@@ -1,6 +1,6 @@
 import { languages, Token, tokenize } from 'prismjs';
 import { Editor, NodeEntry, Node } from 'slate';
-import { BLOCK_CODE_INLINE } from '@/core/types';
+import { BLOCK_CODE } from '@/core/types';
 import 'prismjs/components/prism-antlr4';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-c';
@@ -50,10 +50,9 @@ import 'prismjs/components/prism-yaml';
 export const codeBlockDecorate = (entry: NodeEntry, editor: Editor) => {
   const ranges: any = [];
   const [node, path] = entry;
-  if (node.type === BLOCK_CODE_INLINE) {
+  if (node.type === BLOCK_CODE) {
     const text = Node.string(node);
-    const [parent] = Editor.parent(editor, path);
-    const langName: any = parent.lang || 'markup';
+    const langName: any = node.lang || 'markup';
     const lang = languages[langName];
     if (lang) {
       const tokens = tokenize(text, lang);

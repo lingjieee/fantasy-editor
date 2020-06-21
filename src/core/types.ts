@@ -62,7 +62,6 @@ export const BLOCK_ALIGN_CENTER = 'align-center';
 export const BLOCK_ALIGN_RIGHT = 'align-right';
 export const BLOCK_ALIGN_JUSTIFY = 'align-justify';
 export const BLOCK_CODE = 'code-block';
-export const BLOCK_CODE_INLINE = 'code-inline';
 export const BLOCK_UL = 'ul';
 export const BLOCK_OL = 'ol';
 export const BLOCK_LI = 'li';

@@ -1,6 +1,6 @@
 import { Editor, Range, Transforms } from 'slate';
 import {
-  BLOCK_CODE, BLOCK_CODE_INLINE,
+  BLOCK_CODE,
   BLOCK_H1,
   BLOCK_H2,
   BLOCK_H3,
@@ -8,12 +8,11 @@ import {
   BLOCK_H5,
   BLOCK_H6,
   BLOCK_LI,
-  BLOCK_OL, BLOCK_PARAGRAPH,
+  BLOCK_OL,
   BLOCK_QUOTE, BLOCK_TASK_LIST,
   BLOCK_UL,
 } from '@/core/types';
 import { toggleList } from '@/utils/toggleList';
-import {isBlockActive} from "@/common/transforms";
 import {languages} from './blocks/code-block/constants';
 
 const SHORTCUTS: Record<string, string> = {
@@ -66,46 +65,25 @@ export const withShortcuts = () => <T extends Editor>(editor: T) => {
         if(beforeText==='```'){
           Transforms.select(editor, range);
           Transforms.delete(editor);
-          const active = isBlockActive(editor, BLOCK_CODE);
-          Transforms.unwrapNodes(editor, {
-            match: (n: any) => n.type === BLOCK_CODE,
-          });
           Transforms.setNodes(editor, {
-            type: active ? BLOCK_PARAGRAPH : BLOCK_CODE_INLINE,
+            type: BLOCK_CODE,
+            lang: 'markup',
           });
-          if (!active) {
-            Transforms.wrapNodes(editor, {
-              type: BLOCK_CODE,
-              lang: 'markup',
-              children: [],
-            });
-          }
           return;
         }else{
           const lang = beforeText.replace('```', '');
           if(languages[lang]){
             Transforms.select(editor, range);
             Transforms.delete(editor);
-            const active = isBlockActive(editor, BLOCK_CODE);
-            Transforms.unwrapNodes(editor, {
-              match: (n: any) => n.type === BLOCK_CODE,
-            });
             Transforms.setNodes(editor, {
-              type: active ? BLOCK_PARAGRAPH : BLOCK_CODE_INLINE,
+              type: BLOCK_CODE,
+              lang: lang,
             });
-            if (!active) {
-              Transforms.wrapNodes(editor, {
-                type: BLOCK_CODE,
-                lang: lang,
-                children: [],
-              });
-            }
             return;
           }
         }
       }
     }
-    console.log('insert')
     insertText(text);
   };
 

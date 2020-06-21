@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { RenderElement, BLOCK_CODE, BLOCK_CODE_INLINE } from '@/core/types';
+import { RenderElement, BLOCK_CODE } from '@/core/types';
 import './code-block.less';
 import { languages } from './constants';
 import { ReactEditor, useSlate } from 'slate-react';
@@ -13,12 +13,6 @@ export const renderElementCodeBlock: RenderElement = ({ attributes, children, el
       <CodeBlock {...attributes} element={element}>
         {children}
       </CodeBlock>
-    );
-  } else if (element.type === BLOCK_CODE_INLINE) {
-    return (
-      <div {...attributes} data-slate-type={BLOCK_CODE_INLINE}>
-        {children}
-      </div>
     );
   }
 };
