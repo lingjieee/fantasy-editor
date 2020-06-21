@@ -86,7 +86,7 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-wasm';
 import 'prismjs/components/prism-yaml';
 
-export const serializeHtml = (node:Node) => {
+const serialize = (node:Node, formatCodeBlock:boolean) => {
   if(Text.isText(node)){
     let result = escapeHtml(node.text);
     if(node[MARK_BOLD]){
@@ -124,7 +124,7 @@ export const serializeHtml = (node:Node) => {
     }
     return result;
   }
-  const children = node.children.map(n=>serializeHtml(n)).join('')
+  const children = node.children.map(n=>serialize(n, formatCodeBlock)).join('')
   switch (node.type) {
     case BLOCK_H1:
       return `<h1>${children}</h1>`;
@@ -151,7 +151,11 @@ export const serializeHtml = (node:Node) => {
     case BLOCK_ALIGN_JUSTIFY:
       return `<div style="text-align: justify">${children}</div>`
     case BLOCK_CODE:
-      return `<pre class="language-${node.lang}" data-lang="${node.lang}"><code class="language-${node.lang}">${decorateCodeBlock(node)}</code></pre>`
+      if(formatCodeBlock){
+        return `<pre class="language-${node.lang}" data-lang="${node.lang}"><code class="language-${node.lang}">${decorateCodeBlock(node)}</code></pre>`
+      }else{
+        return `<pre data-lang="${node.lang}"><code>${children}</code></pre>`
+      }
     case BLOCK_UL:
       return `<ul>${children}</ul>`
     case BLOCK_OL:
@@ -203,15 +207,31 @@ const decorateCodeBlock = (node:Node) => {
   const lang = languages[langName];
   if(lang){
     const tokens = tokenize(text, lang);
-    return tokens.map(element=>{
-      if(typeof element === 'string'){
-        return `<span>${element}</span>`;
-      }else{
-        const token: Token = element;
-        return `<span class="prism-token token ${token.type}">${token.content}</span>`;
-      }
-    })
+    return renderElement(tokens);
   }else{
     return text;
   }
+};
+
+const renderElement = (tokens) => {
+  return tokens.map(element=>{
+    if(typeof element === 'string'){
+      return `<span>${element}</span>`;
+    }else{
+      const token: Token = element;
+      if(Array.isArray(token.content)){
+        return renderElement(token.content);
+      }else{
+        return `<span class="prism-token token ${token.type}">${token.content}</span>`;
+
+      }
+    }
+  })
+};
+
+export const serializeHtml = (nodes:Node[], formatCodeBlock:boolean = false) => {
+  const editor = {
+    children: nodes
+  }
+  return serialize(editor, formatCodeBlock);
 };

@@ -57,21 +57,34 @@ export const codeBlockDecorate = (entry: NodeEntry, editor: Editor) => {
     if (lang) {
       const tokens = tokenize(text, lang);
       let offset = 0;
-      for (const element of tokens) {
-        if (typeof element === 'string') {
-          offset = offset + element.length;
-        } else {
-          const token: Token = element;
-          ranges.push({
-            anchor: { path, offset: offset },
-            focus: { path, offset: offset + token.length },
-            className: `prism-token token ${token.type} `,
-            prism: true,
-          });
-          offset = offset + token.length;
-        }
-      }
+      const {ranges: r} = buildRange(tokens, path, offset);
+      ranges.push(...r);
     }
   }
   return ranges;
 };
+
+const buildRange = (tokens, path, offset) => {
+  const ranges: any = [];
+  for (const element of tokens) {
+    if (typeof element === 'string') {
+      offset = offset + element.length;
+    } else {
+      const token: Token = element;
+      if(Array.isArray(token.content)){
+        const {ranges:r, offset: o} = buildRange(token.content, path, offset);
+        ranges.push(...r);
+        offset = o;
+      }else{
+        ranges.push({
+          anchor: { path, offset: offset },
+          focus: { path, offset: offset + token.length },
+          className: `prism-token token ${token.type} `,
+          prism: true,
+        });
+        offset = offset + token.length;
+      }
+    }
+  }
+  return {ranges, offset}
+}

@@ -41,7 +41,7 @@ import {
   MARK_UNDERLINE
 } from "@/core";
 
-export const serializeMarkdown = (node:Node, listLevel?:number, liIdx?:number) => {
+const serialize = (node:Node, listLevel?:number, liIdx?:number) => {
   if(Text.isText(node)){
     let result = node.text.replaceAll('\n', '  \n');
     if(node[MARK_BOLD]){
@@ -82,12 +82,12 @@ export const serializeMarkdown = (node:Node, listLevel?:number, liIdx?:number) =
   let children;
   if(node.type===BLOCK_OL){
     const level = (listLevel??0)+1;
-    children = node.children.map((n,i)=>serializeMarkdown(n,level,i)).join('')
+    children = node.children.map((n,i)=>serialize(n,level,i)).join('')
   }else if(node.type===BLOCK_UL){
     const level = (listLevel??0)+1;
-    children = node.children.map((n)=>serializeMarkdown(n,level)).join('')
+    children = node.children.map((n)=>serialize(n,level)).join('')
   }else{
-    children = node.children.map(n=>serializeMarkdown(n, listLevel)).join('')
+    children = node.children.map(n=>serialize(n, listLevel)).join('')
   }
   switch (node.type) {
     case BLOCK_H1:
@@ -169,3 +169,10 @@ export const serializeMarkdown = (node:Node, listLevel?:number, liIdx?:number) =
       return children;
   }
 }
+
+export const serializeMarkdown = (nodes:Node) => {
+  const editor = {
+    children: nodes
+  }
+  return serialize(editor);
+};

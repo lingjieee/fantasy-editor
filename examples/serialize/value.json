@@ -1,0 +1,297 @@
+[
+  {
+    "type": "h1",
+    "children": [
+      {
+        "text": "Heading1"
+      }
+    ]
+  },
+  {
+    "type": "h2",
+    "children": [
+      {
+        "text": "Heading2"
+      }
+    ]
+  },
+  {
+    "type": "h3",
+    "children": [
+      {
+        "text": "Heading3"
+      }
+    ]
+  },
+  {
+    "type": "h4",
+    "children": [
+      {
+        "text": "Heading4"
+      }
+    ]
+  },
+  {
+    "type": "h5",
+    "children": [
+      {
+        "text": "Heading5"
+      }
+    ]
+  },
+  {
+    "type": "h6",
+    "children": [
+      {
+        "text": "Heading6"
+      }
+    ]
+  },
+  {
+    "type": "ul",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "bulleted list1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "bulleted list2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "bulleted list3"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "nested list1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "nested list2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ol",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "numbered list1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "numbered list2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "numbered list3"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "task-list",
+    "children": [
+      {
+        "text": "task1"
+      }
+    ]
+  },
+  {
+    "type": "task-list",
+    "children": [
+      {
+        "text": "task2"
+      }
+    ],
+    "checked": true
+  },
+  {
+    "type": "task-list",
+    "children": [
+      {
+        "text": "task3"
+      }
+    ]
+  },
+  {
+    "type": "blockquote",
+    "children": [
+      {
+        "text": "Blockquote"
+      }
+    ]
+  },
+  {
+    "type": "code-block",
+    "lang": "javascript",
+    "children": [
+      {
+        "text": "const FullUsage: FunctionComponent<Props> = (props) => {\n\n  const [value, setValue] = useState<Node[]>(initValue as any);\n  const config: Config = {};\n\n  const onChange = (value: Node[]) => {\n    setValue(value);\n  };\n\n  return (\n    <div style={{padding: 50}}>\n      <FantasyEditor value={value} config={config} onChange={onChange}/>\n    </div>\n  );\n};"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Bold",
+        "bold": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "italic",
+        "italic": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "underline",
+        "underline": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "strikethrough",
+        "strike-through": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "mixed",
+        "bold": true,
+        "italic": true,
+        "underline": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "code",
+        "code": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "sub",
+        "subscript": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "sup",
+        "superscript": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "color",
+        "font-color": "#d0021b"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "bg-clor",
+        "bg-color": "#f8e71c"
+      },
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "",
+        "bg-color": "#f8e71c"
+      }
+    ]
+  }
+]
